@@ -131,6 +131,10 @@
         });
       }, { threshold: 0.4 });
       vio.observe(vid);
+    } else if (vid && unmuteBtn && reduce) {
+      // Reduced motion: no autoplay. Present the control as a play button.
+      storyVideo.classList.add("is-reduced");
+      unmuteBtn.setAttribute("aria-label", "Play Chintya's testimonial");
     }
 
     // Unmute button: unmute + restart from the top; click again to re-mute.
@@ -141,6 +145,7 @@
           vid.currentTime = 0;
           vid.play().catch(function () {});
           storyVideo.classList.add("is-unmuted");
+          storyVideo.classList.remove("is-reduced");
           unmuteBtn.setAttribute("aria-pressed", "true");
           unmuteBtn.setAttribute("aria-label", "Mute Chintya's testimonial");
         } else {
