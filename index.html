@@ -7,6 +7,9 @@
   <meta name="description" content="Community Assist is a Bali collective that turns community events into education, raising funds so kids who can't afford school, can. Donate or sponsor a child today." />
   <meta name="theme-color" content="#4661AD" />
 
+  <!-- Preload the LCP hero image so it isn't discovered behind the render-blocking font CSS -->
+  <link rel="preload" as="image" href="assets/img/hero-people.webp" fetchpriority="high" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Community Assist — Turn community into opportunity" />
   <meta property="og:description" content="A Bali collective turning events into education. Rp 6 million sends one child to school for a whole year. Donate or sponsor a child." />
@@ -134,6 +137,7 @@
         <a href="#impact">Impact</a>
         <a href="#events">The Events</a>
         <a href="#give">Ways to Give</a>
+        <a href="#sponsors">Sponsors</a>
       </nav>
       <div class="nav-right">
         <a href="#donate" class="btn btn--primary nav-cta">Donate</a>
@@ -143,11 +147,12 @@
   </header>
 
   <!-- mobile menu -->
-  <div class="mobile-sheet" id="mobile-sheet" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mobile-sheet" id="mobile-sheet" aria-label="Menu">
     <a class="m-link" href="#mission">Our Mission</a>
     <a class="m-link" href="#impact">Impact</a>
     <a class="m-link" href="#events">The Events</a>
     <a class="m-link" href="#give">Ways to Give</a>
+    <a class="m-link" href="#sponsors">Sponsors</a>
     <a class="btn btn--primary btn--lg" href="#donate">Donate</a>
     <svg class="m-heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg>
   </div>
@@ -170,7 +175,7 @@
         <div class="hero-media reveal d2">
           <div class="hero-card">
             <svg class="hero-card-heart" viewBox="0 0 519.508 215" aria-hidden="true"><use href="#i-logo-heart"/></svg>
-            <img class="hero-people" src="assets/img/hero-people.webp" width="841" height="1069" alt="Community Assist members embracing and celebrating together at an event in Bali" />
+            <img class="hero-people" src="assets/img/hero-people.webp" width="841" height="1069" fetchpriority="high" alt="Community Assist members embracing and celebrating together at an event in Bali" />
           </div>
         </div>
       </div>
@@ -180,7 +185,7 @@
     <section class="cred section section--tight" aria-label="Our impact in numbers">
       <div class="wrap">
         <div class="cred-stats">
-          <div class="stat reveal stat--marked"><div class="stat-num"><span class="accent underline-doodle">Rp 942M+</span></div><div class="stat-label">Total raised to date</div></div>
+          <div class="stat reveal"><div class="stat-num"><span class="accent">Rp 942M+</span></div><div class="stat-label">Total raised to date</div></div>
           <div class="stat reveal d1"><div class="stat-num">Rp 358M</div><div class="stat-label">Raised in 2025</div></div>
           <div class="stat reveal d2"><div class="stat-num">500+</div><div class="stat-label">At our 2025 events</div></div>
           <div class="stat reveal d3"><div class="stat-num">200+</div><div class="stat-label">Bali businesses behind us</div></div>
@@ -269,7 +274,7 @@
                 <source src="assets/video/chintya.mp4" type="video/mp4" />
                 <img src="assets/img/impact-chintya.webp" width="665" height="520" alt="Ni Putu Chintya Pratiwi in cap and gown holding a Happy Graduation sign" />
               </video>
-              <button type="button" class="video-unmute" aria-pressed="false" aria-label="Unmute Chintya's testimonial">
+              <button type="button" class="video-unmute" aria-label="Unmute Chintya's testimonial">
                 <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                 <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
                 <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg>
@@ -283,7 +288,7 @@
               <p class="s-text">Today her dad's income has recovered, her mum has a steady business of her own, and Chintya contributes fully from her new job. The family now supports itself and is putting her two younger brothers through school. One scholarship, a whole family's future.</p>
             </div>
           </article>
-          <div class="story-col">
+          <div class="story-row">
             <article class="story story-side reveal d1">
               <div class="story-img"><img src="assets/img/impact-indah.webp" width="807" height="1076" alt="Indah, a high-school student in Denpasar" loading="lazy" /></div>
               <div class="story-body">
@@ -337,7 +342,7 @@
 
     <!-- ============ 6 · 2026 goal (brand moment) ============ -->
     <section class="goal section" aria-labelledby="goal-h">
-      <img class="goal-student left" src="assets/img/student-girl.webp" width="417" height="662" alt="" aria-hidden="true" loading="lazy" />
+      <img class="goal-student left" src="assets/img/student-girl.webp" width="417" height="665" alt="" aria-hidden="true" loading="lazy" />
       <img class="goal-student right" src="assets/img/student-boy.webp" width="508" height="679" alt="" aria-hidden="true" loading="lazy" />
       <div class="wrap">
         <p class="eyebrow"><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg> Our 2026 goal</p>
@@ -345,12 +350,12 @@
         <p class="goal-sub">to fund <strong>30 scholarships</strong> and a dedicated community manager for the year ahead.</p>
         <!-- PLACEHOLDER progress — see BUILD-NOTES.md. Update data-progress with the real figure before launch. -->
         <div class="progress">
-          <div class="progress-track"><div class="progress-fill" data-progress="75"></div></div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" aria-label="Funding toward our 2026 goal"><div class="progress-fill" data-progress="75"></div></div>
           <div class="progress-meta"><span>Funding in progress</span><span><b>75%</b> toward our goal</span></div>
         </div>
         <div class="goal-cta">
           <a href="#donate" class="btn btn--white btn--lg">Donate</a>
-          <a href="#give" class="btn btn--ghost-light btn--lg">Become a sponsor</a>
+          <a href="#give" class="btn btn--ghost-light btn--lg">See ways to give</a>
         </div>
       </div>
     </section>
@@ -402,7 +407,7 @@
                 <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg> One banner set on-site</li>
                 <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg> Group post + story mention</li>
               </ul>
-              <a href="#donate" class="btn btn--outline btn--block">Become a sponsor</a>
+              <a href="mailto:communityassist@indosole.com?subject=Community%20sponsorship%20(Rp%2020M)" class="btn btn--outline btn--block">Become a sponsor</a>
             </article>
             <article class="tier">
               <div class="t-name">Game Changer</div>
@@ -415,7 +420,7 @@
                 <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg> Live PA announcement</li>
                 <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg> Dedicated carousel slide + story</li>
               </ul>
-              <a href="#donate" class="btn btn--outline btn--block">Become a sponsor</a>
+              <a href="mailto:communityassist@indosole.com?subject=Game%20Changer%20sponsorship%20(Rp%2060M)" class="btn btn--outline btn--block">Become a sponsor</a>
             </article>
             <article class="tier featured">
               <span class="t-badge">Most impact</span>
@@ -429,10 +434,10 @@
                 <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg> Live PA + company spotlight</li>
                 <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg> 30s Reel + 8-slide carousel + story</li>
               </ul>
-              <a href="#donate" class="btn btn--primary btn--block">Become a sponsor</a>
+              <a href="mailto:communityassist@indosole.com?subject=Champion%20sponsorship%20(Rp%20120M)" class="btn btn--primary btn--block">Become a sponsor</a>
             </article>
           </div>
-          <p class="give-biz-cta muted">Prefer a yearly bundle? The <strong>Community Partner</strong> package (Rp 20M/yr) adds full event registration, 2 auction-dinner tickets and quarterly marketing support. <a href="#donate">Talk to us →</a></p>
+          <p class="give-biz-cta muted">Prefer a yearly bundle? The <strong>Community Partner</strong> package (Rp 20M/yr) adds full event registration, 2 auction-dinner tickets and quarterly marketing support. <a href="mailto:communityassist@indosole.com?subject=Community%20Partner%20package%20(Rp%2020M%2Fyr)">Talk to us →</a></p>
         </div>
       </div>
     </section>
@@ -467,11 +472,11 @@
           <h3>Be part of the day</h3>
           <p class="bp-sub">There's a way in for everyone, not just a cheque.</p>
           <div class="bepart-grid">
-            <div class="bp-item"><div class="bp-num"></div><h4>Sponsor or donate</h4><p>Back the day at any level.</p></div>
-            <div class="bp-item"><div class="bp-num"></div><h4>Register a team</h4><p>Rp 1,000,000 for 3 players + 2 reserves.</p></div>
-            <div class="bp-item"><div class="bp-num"></div><h4>Run a workshop</h4><p>Share a skill or presentation.</p></div>
-            <div class="bp-item"><div class="bp-num"></div><h4>Donate a prize</h4><p>For the raffle or auction night.</p></div>
-            <div class="bp-item"><div class="bp-num"></div><h4>Book a stall</h4><p>Sell at the community market.</p></div>
+            <a class="bp-item" href="mailto:communityassist@indosole.com?subject=Sponsor%20or%20donate%20at%20a%20Community%20Assist%20event"><div class="bp-num"></div><h4>Sponsor or donate</h4><p>Back the day at any level.</p></a>
+            <a class="bp-item" href="mailto:communityassist@indosole.com?subject=Register%20a%20basketball%20team"><div class="bp-num"></div><h4>Register a team</h4><p>Rp 1,000,000 for 3 players + 2 reserves.</p></a>
+            <a class="bp-item" href="mailto:communityassist@indosole.com?subject=Run%20a%20workshop%20at%20a%20Community%20Assist%20event"><div class="bp-num"></div><h4>Run a workshop</h4><p>Share a skill or presentation.</p></a>
+            <a class="bp-item" href="mailto:communityassist@indosole.com?subject=Donate%20a%20raffle%20or%20auction%20prize"><div class="bp-num"></div><h4>Donate a prize</h4><p>For the raffle or auction night.</p></a>
+            <a class="bp-item" href="mailto:communityassist@indosole.com?subject=Book%20a%20community-market%20stall"><div class="bp-num"></div><h4>Book a stall</h4><p>Sell at the community market.</p></a>
           </div>
         </div>
 
@@ -481,13 +486,13 @@
             <h3 class="pe-title">A look back at the community we&rsquo;ve built.</h3>
           </div>
           <div class="pe-gallery">
-            <figure class="pe-photo reveal"><img src="assets/img/pe-team.webp" width="1043" height="697" alt="A team of young players, arms around each other, on the court before a game" loading="lazy" /><figcaption>The crew</figcaption></figure>
-            <figure class="pe-photo reveal d1"><img src="assets/img/pe-champion.webp" width="597" height="894" alt="A 2024 Champion basketball resting on a chair at Canggu Community School" loading="lazy" /><figcaption>Champions</figcaption></figure>
-            <figure class="pe-photo reveal d2"><img src="assets/img/pe-drive.webp" width="501" height="750" alt="A player driving to the basket in motion during a 3x3 game" loading="lazy" /><figcaption>On the break</figcaption></figure>
-            <figure class="pe-photo reveal"><img src="assets/img/pe-bleachers.webp" width="954" height="637" alt="Friends and supporters watching from the bleachers, courtside" loading="lazy" /><figcaption>Courtside</figcaption></figure>
-            <figure class="pe-photo reveal d1"><img src="assets/img/pe-swich.webp" width="469" height="625" alt="The Swich pop-up food stall at the charity tournament" loading="lazy" /><figcaption>Pop-up stalls</figcaption></figure>
-            <figure class="pe-photo reveal d2"><img src="assets/img/pe-masks.webp" width="955" height="637" alt="Finalists holding carved masks and trophies after the tournament" loading="lazy" /><figcaption>Finals day</figcaption></figure>
-            <figure class="pe-photo reveal d3"><img src="assets/img/pe-layup.webp" width="548" height="821" alt="A contested layup under the basket during a tournament game" loading="lazy" /><figcaption>Game on</figcaption></figure>
+            <figure class="pe-photo reveal"><img src="assets/img/pe-team.webp" width="1043" height="697" alt="A team of young players, arms around each other, on the court before a game" loading="lazy" /></figure>
+            <figure class="pe-photo reveal d1"><img src="assets/img/pe-champion.webp" width="597" height="894" alt="A 2024 Champion basketball resting on a chair at Canggu Community School" loading="lazy" /></figure>
+            <figure class="pe-photo reveal d2"><img src="assets/img/pe-drive.webp" width="501" height="750" alt="A player driving to the basket in motion during a 3x3 game" loading="lazy" /></figure>
+            <figure class="pe-photo reveal"><img src="assets/img/pe-bleachers.webp" width="954" height="637" alt="Friends and supporters watching from the bleachers, courtside" loading="lazy" /></figure>
+            <figure class="pe-photo reveal d1"><img src="assets/img/pe-swich.webp" width="469" height="625" alt="The Swich pop-up food stall at the charity tournament" loading="lazy" /></figure>
+            <figure class="pe-photo reveal d2"><img src="assets/img/pe-masks.webp" width="955" height="637" alt="Finalists holding carved masks and trophies after the tournament" loading="lazy" /></figure>
+            <figure class="pe-photo reveal d3"><img src="assets/img/pe-layup.webp" width="548" height="821" alt="A contested layup under the basket during a tournament game" loading="lazy" /></figure>
           </div>
         </div>
       </div>
@@ -517,22 +522,60 @@
           <div class="sponsor-grid changers">
             <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/oshom-white.webp" width="648" height="508" alt="Oshom" loading="lazy" /></div>
             <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/yuki-white.webp" width="2183" height="666" alt="YUKI" loading="lazy" /></div>
-            <div class="sponsor-chip">Swich</div>
+            <div class="sponsor-chip"><img class="slogo slogo--color" src="assets/img/partners/swich.webp" width="320" height="320" alt="Swich" loading="lazy" /></div>
             <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/tacos-aqui-white.webp" width="340" height="108" alt="Tacos Aqui" loading="lazy" /></div>
             <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/room4dessert-white.webp" width="600" height="506" alt="Room4Dessert" loading="lazy" /></div>
             <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/the-boogaloo-white.webp" width="628" height="244" alt="The Boogaloo" loading="lazy" /></div>
             <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/hey-rcg-ink.webp" width="1077" height="378" alt="hey RCG" loading="lazy" /></div>
             <div class="sponsor-chip"><img class="slogo slogo--color" src="assets/img/partners/mason-adventures.webp" width="512" height="512" alt="Mason Adventures Bali" loading="lazy" /></div>
-            <div class="sponsor-chip">Better Hospitality</div>
+            <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/better-hospitality-ink.webp" width="560" height="284" alt="Better Hospitality Reviews" loading="lazy" /></div>
             <div class="sponsor-chip"><img class="slogo" src="assets/img/partners/smoke-ink.svg" width="113" height="34" alt="Smoke" loading="lazy" /></div>
           </div>
         </div>
 
         <div class="sponsor-tier reveal">
           <p class="st-label">Community Heroes</p>
-          <div class="sponsor-grid heroes">
-            <div class="sponsor-chip" style="color:var(--blue);border-color:var(--sky)">+ 180 more local businesses</div>
-          </div>
+          <ul class="hero-names">
+            <li class="hero-name">ARTE</li>
+            <li class="hero-name">Noema</li>
+            <li class="hero-name">CS Dental</li>
+            <li class="hero-name">Kilo Seminyak</li>
+            <li class="hero-name">Le Pirate</li>
+            <li class="hero-name">Luigi's Hot Pizza</li>
+            <li class="hero-name">KYND</li>
+            <li class="hero-name">Kura Kura</li>
+            <li class="hero-name">Palapa</li>
+            <li class="hero-name">Pound 4 Pound Dojo</li>
+            <li class="hero-name">Red Gunpowder</li>
+            <li class="hero-name">Bramble Living</li>
+            <li class="hero-name">Tale of Two</li>
+            <li class="hero-name">Woods</li>
+            <li class="hero-name">Yogurt Republic</li>
+            <li class="hero-name">ZOZO</li>
+            <li class="hero-name">Uma Sapna</li>
+            <li class="hero-name">Sunset Beach</li>
+            <li class="hero-name">Jiwa Yoga</li>
+            <li class="hero-name">Body Factory Bali</li>
+            <li class="hero-name">Bali Food &amp; Travel</li>
+            <li class="hero-name">Potato Head</li>
+            <li class="hero-name">Bodyworks Spa</li>
+            <li class="hero-name">Boy N Cow</li>
+            <li class="hero-name">Sasanawana Eco Lodge</li>
+            <li class="hero-name">Rise &amp; Shine</li>
+            <li class="hero-name">Recovr</li>
+            <li class="hero-name">Palm Four</li>
+            <li class="hero-name">Island Brewing</li>
+            <li class="hero-name">Sienna</li>
+            <li class="hero-name">Televisi Star</li>
+            <li class="hero-name">Barefoot</li>
+            <li class="hero-name">69 Slam</li>
+            <li class="hero-name">FaceDay</li>
+            <li class="hero-name">Waterbom Bali</li>
+            <li class="hero-name">Hotel Indigo</li>
+            <li class="hero-name">Indigo Kids</li>
+            <li class="hero-name">The Dose Bali</li>
+            <li class="hero-name hero-name--more">+ 150 more local businesses</li>
+          </ul>
         </div>
 
         <p class="sponsor-cta reveal">Want your logo here? <a href="#give">Become a sponsor →</a></p>
@@ -547,12 +590,11 @@
             <h2 class="h2" id="final-h">Ready to change a future?</h2>
             <p class="f-sub">Every gift goes straight to a child's education, with 69% direct to the scholarship program. Receipts available on request.</p>
             <div class="final-cta">
-              <a href="#donate-card" class="btn btn--white btn--lg">Donate</a>
-              <a href="mailto:communityassist@indosole.com" class="talk">Talk to us</a>
+              <a href="mailto:communityassist@indosole.com" class="btn btn--white btn--lg">Talk to us</a>
             </div>
           </div>
           <div class="bank-card reveal d2" id="donate-card">
-            <div class="bc-head"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lock"/></svg> Bank transfer details</div>
+            <div class="bc-head"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lock"/></svg> Donate by bank transfer</div>
             <div class="bank-field">
               <div><div class="bf-label">Account name</div><div class="bf-value">Ragam Kemanusiaan Indonesia</div></div>
               <button class="copy-btn" data-copy="Ragam Kemanusiaan Indonesia" aria-label="Copy account name"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg><span class="copied-tip">Copied!</span></button>
@@ -573,8 +615,9 @@
               <div><div class="bf-label">Bank address</div><div class="bf-value">Canggu Berawa, Jl. Subak Sari No. 11, Tibubeneng, Bali 80361</div></div>
               <button class="copy-btn" data-copy="Canggu Berawa, Jl. Subak Sari No. 11, Tibubeneng, Bali 80361" aria-label="Copy bank address"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg><span class="copied-tip">Copied!</span></button>
             </div>
+            <p class="bank-note">Transfers go to <strong>Ragam Kemanusiaan Indonesia</strong>, the foundation behind our scholarship program. Send us your transfer confirmation for a receipt.</p>
             <p class="bank-note">Donating from abroad? SWIFT transfers are supported.</p>
-            <p class="bank-contact"><a href="mailto:communityassist@indosole.com">communityassist@indosole.com</a> · <a href="https://wa.me/6281237609071">+62 812-3760-9071</a></p>
+            <p class="bank-contact"><a href="mailto:communityassist@indosole.com">communityassist@indosole.com</a> · <a href="https://wa.me/6281237609071" target="_blank" rel="noopener">+62 812-3760-9071</a></p>
           </div>
         </div>
         <p class="final-signoff reveal">Thank you for being part of Community Assist 2026. <svg viewBox="0 0 24 24" width="22" style="color:var(--yellow);vertical-align:-3px" aria-hidden="true"><use href="#i-heart"/></svg></p>
@@ -590,12 +633,12 @@
         <p class="footer-benef">In support of the Ragam Foundation &amp; Green School Foundation scholarship programs.</p>
         <nav class="footer-contact">
           <a href="mailto:communityassist@indosole.com">communityassist@indosole.com</a>
-          <a href="https://wa.me/6281237609071">+62 812-3760-9071</a>
+          <a href="https://wa.me/6281237609071" target="_blank" rel="noopener">+62 812-3760-9071</a>
           <a href="https://www.instagram.com/communityassistbali/" target="_blank" rel="noopener">Instagram @communityassistbali</a>
         </nav>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Community Assist</span>
+        <span>© 2026 Community Assist · We use your details only to process your gift and send your receipt.</span>
       </div>
     </div>
   </footer>

@@ -1,1 +1,8 @@
 .DS_Store
+
+# Heavy / stray source files that must NOT ship to the public web root.
+# (The page references the optimised assets/img/*.webp, never these.)
+Community Assist Carousel.mov
+assets/img/hero-people.png
+image.png
+image copy*.png
