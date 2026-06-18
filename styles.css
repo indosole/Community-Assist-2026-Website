@@ -157,9 +157,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 }
 .site-header.scrolled { border-bottom-color: var(--hairline); box-shadow: 0 6px 20px rgba(31,32,36,.05); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
-.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.brand .brand-heart { height: 26px; width: auto; color: var(--blue); flex-shrink: 0; }
-.brand .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.06rem; letter-spacing: -.01em; color: var(--ink); }
+.brand { display: flex; align-items: center; flex-shrink: 0; }
+.brand .brand-full { height: 48px; width: auto; color: var(--blue); flex-shrink: 0; }
 .nav-links { display: flex; align-items: center; gap: clamp(14px, 2vw, 30px); }
 .nav-links a { font-weight: 500; font-size: .96rem; color: #34363C; position: relative; padding: 4px 0; }
 .nav-links a::after {
@@ -192,7 +191,6 @@ body.menu-open .hamburger span::after { top: 0; transform: rotate(-45deg); }
 body.menu-open .mobile-sheet { transform: translateY(0); opacity: 1; visibility: visible; }
 .mobile-sheet a.m-link { font-family: var(--font-display); font-size: 1.7rem; font-weight: 600; color: var(--ink); padding: 10px; }
 .mobile-sheet .btn { margin-top: 22px; }
-.mobile-sheet .m-heart { position: absolute; bottom: 36px; width: 40px; color: var(--sky); opacity: .5; }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; overflow: hidden; padding-block: clamp(40px, 6vw, 84px); }
@@ -365,7 +363,10 @@ body.menu-open .mobile-sheet { transform: translateY(0); opacity: 1; visibility:
    so they stay clear of the centred headline. */
 @media (max-width: 1080px) {
   .goal { min-height: 0; }
-  .goal-student { width: clamp(140px, 18vw, 200px); }
+  /* Tucked to the edges near the centred headline, the students sit under the
+     progress text/CTAs — soften them so the white copy stays legible. Phones
+     fade them further (.18, below). */
+  .goal-student { width: clamp(140px, 18vw, 200px); opacity: .7; }
   .goal-student.left  { left: clamp(4px, 2vw, 24px); right: auto; }
   .goal-student.right { right: clamp(4px, 2vw, 24px); left: auto; }
 }
@@ -573,6 +574,10 @@ a.bp-item:hover h4 { color: var(--blue); }
   .hero .lead { max-width: 48ch; }
 
   .cred-stats { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  /* Once the 6 partner logos wrap, space-between strands them at opposite edges
+     with a void between (e.g. two logos marooned on one row). Cluster them
+     centered with an even gap so wrapped rows stay balanced. */
+  .logo-row { justify-content: center; gap: 24px 32px; }
   .partner-rows { gap: 44px; }
   .prow { grid-template-columns: 1fr; gap: 22px; max-width: 520px; }
   .prow:nth-child(even) .prow-photo { order: 0; }
@@ -606,7 +611,8 @@ a.bp-item:hover h4 { color: var(--blue); }
   .sponsor-grid.champions { grid-template-columns: 1fr; }  /* wide wordmarks need full width on the smallest phones */
 }
 
-@media (max-width: 360px) {
-  /* keep the heart mark but drop the wordmark so the header Donate CTA + menu fit */
-  .brand .brand-name { display: none; }
+/* Phones: trim the stacked logo a touch so it sits comfortably beside the
+   Donate CTA + menu button on narrow screens (iPhone/Pixel ~390–430px). */
+@media (max-width: 480px) {
+  .brand .brand-full { height: 42px; }
 }
