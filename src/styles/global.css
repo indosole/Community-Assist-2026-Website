@@ -205,12 +205,12 @@ body.menu-open .mobile-sheet { transform: translateY(0); opacity: 1; visibility:
   max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter);
   display: flex; flex-direction: column; gap: 16px;
 }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
 .trust-chip { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-size: .92rem; color: var(--grey); font-weight: 500; }
 .trust-item { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .trust-chip .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pink); flex: none; }
 .trust-chip b { color: var(--ink); font-weight: 700; }
-.trust-chip--hero { color: rgba(255,255,255,.92); }
+.trust-chip--hero { justify-content: center; color: rgba(255,255,255,.92); }
 .trust-chip--hero b { color: #fff; }
 
 /* ---------- Credibility band ---------- */
