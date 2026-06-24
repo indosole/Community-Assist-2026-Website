@@ -14,8 +14,8 @@ image copy*.png
 
 # Build-phase reference material — kept locally, purged from the repo for client handoff.
 # (Removed from history too; restore from a backup bundle if ever needed.)
+# Note: HANDOFF.md is intentionally tracked — it's the maintainer/editing runbook.
 COMMUNITYASSIST__2026.pdf
 CLAUDE.md
 BUILD-NOTES.md
-HANDOFF.md
 docs/
