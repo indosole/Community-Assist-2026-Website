@@ -269,7 +269,6 @@ collections:
                 fields:
                   - { label: "Swatch colour", name: "swatch", widget: "select", options: ["var(--blue)", "var(--orchid)", "var(--yellow)", "var(--pink)", "var(--green)"] }
                   - { label: "Label", name: "label", widget: "string" }
-              - { label: "Transparency line", name: "transparencyHtml", widget: "string", hint: "HTML allowed" }
 
       # 6 · 2026 goal
       - file: "src/data/goal.json"
@@ -382,6 +381,13 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "string" }
                   - { label: "Email link (mailto)", name: "mailto", widget: "string" }
+              - label: "CTA button"
+                name: "cta"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Button label", name: "label", widget: "string" }
+                  - { label: "Button link (URL)", name: "href", widget: "string", hint: "e.g. a Google Form link" }
           - label: "Past events"
             name: "pastEvents"
             widget: "object"
@@ -455,11 +461,12 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Link", name: "href", widget: "string" }
-          - label: "QRIS tab (scan to donate)"
+          - label: "QRIS card (scan to donate)"
             name: "qris"
             widget: "object"
             fields:
-              - { label: "Show QRIS tab", name: "enabled", widget: "boolean", default: true }
+              - { label: "Show QRIS card", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
               - { label: "QR code image", name: "image", widget: "image", hint: "The QRIS QR. Keep it crisp/lossless so it always scans." }
               - { label: "QRIS logo", name: "logo", widget: "image", required: false }
               - { label: "Merchant name", name: "merchant", widget: "string" }

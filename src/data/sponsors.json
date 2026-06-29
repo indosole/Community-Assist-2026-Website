@@ -1,7 +1,7 @@
 {
-  "eyebrow": "Our Sponsors",
+  "eyebrow": "Our Partners",
   "heading": "Powered by 200+ Bali businesses.",
-  "lead": "Every sponsorship is remembered. We make sure our community knows who makes this possible.",
+  "lead": "Every partnership is remembered. We make sure our community knows who makes this possible.",
   "champions": [
     {
       "src": "/assets/img/partners/homes-by-heffry-white.webp",
@@ -294,7 +294,7 @@
   "communityHeroesMore": "+ 150 more local businesses",
   "ctaText": "Want your logo here?",
   "ctaLink": {
-    "label": "Become a sponsor →",
+    "label": "Become a partner →",
     "href": "#give"
   }
 }

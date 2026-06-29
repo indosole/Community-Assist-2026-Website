@@ -1,56 +1,40 @@
 ---
 import donate from '../data/donate.json';
 const { bank, qris } = donate;
-const showTabs = !!qris?.enabled;
 ---
 
 <!-- ============ 10 · Final CTA / How to donate ============ -->
 <section class="final section" id="donate" aria-labelledby="final-h">
   <div class="wrap">
-    <div class="final-grid">
-      <div class="reveal">
-        <h2 class="h2" id="final-h">{donate.heading}</h2>
-        <p class="f-sub">{donate.sub}</p>
-        <div class="final-cta">
-          <a href={donate.talkCta.href} class="btn btn--white btn--lg">{donate.talkCta.label}</a>
-        </div>
+    <div class="final-lead reveal">
+      <h2 class="h2" id="final-h">{donate.heading}</h2>
+      <p class="f-sub">{donate.sub}</p>
+      <div class="final-cta">
+        <a href={donate.talkCta.href} class="btn btn--white btn--lg">{donate.talkCta.label}</a>
       </div>
-      <div class="bank-card reveal d2" id="donate-card">
-        {showTabs && (
-          <div class="pay-tabs" role="tablist" aria-label="Donation method">
-            <button class="pay-tab" role="tab" id="tab-bank" aria-selected="true" aria-controls="panel-bank">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lock"/></svg> Bank transfer
-            </button>
-            <button class="pay-tab" role="tab" id="tab-qris" aria-selected="false" aria-controls="panel-qris" tabindex="-1">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-qr"/></svg> QRIS
-            </button>
-          </div>
-        )}
-
-        <div class="pay-panel active" id="panel-bank" role={showTabs ? "tabpanel" : undefined} aria-labelledby={showTabs ? "tab-bank" : undefined}>
-          {!showTabs && (
-            <div class="bc-head"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lock"/></svg> {bank.title}</div>
-          )}
-          {bank.fields.map((f) => (
-            <div class="bank-field">
-              <div><div class="bf-label">{f.label}</div><div class="bf-value">{f.value}</div></div>
-              <button class="copy-btn" data-copy={f.copy} aria-label={f.aria}><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg><span class="copied-tip">Copied!</span></button>
-            </div>
-          ))}
-          {bank.notes.map((n) => <p class="bank-note" set:html={n} />)}
-          <p class="bank-contact" set:html={bank.contactHtml} />
+    </div>
+    <div class="pay-cards">
+      {qris?.enabled && (
+        <div class="qris-card reveal" id="qris-card">
+          <div class="bc-head"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-qr"/></svg> {qris.title}</div>
+          {qris.logo && <img class="qris-mark" src={qris.logo} alt="QRIS" width="160" loading="lazy" decoding="async" />}
+          <div class="qris-merchant">{qris.merchant}<span class="qris-nmid">{qris.nmid}</span></div>
+          <img class="qris-img" src={qris.image} width="240" height="240" alt={`QRIS donation QR code for ${qris.merchant}`} loading="lazy" decoding="async" />
+          <p class="qris-caption">{qris.caption}</p>
+          {qris.apps && <p class="qris-apps">{qris.apps}</p>}
+          {qris.note && <p class="qris-note">{qris.note}</p>}
         </div>
-
-        {showTabs && (
-          <div class="pay-panel pay-panel--qris" id="panel-qris" role="tabpanel" aria-labelledby="tab-qris" hidden>
-            {qris.logo && <img class="qris-mark" src={qris.logo} alt="QRIS" width="160" loading="lazy" decoding="async" />}
-            <div class="qris-merchant">{qris.merchant}<span class="qris-nmid">{qris.nmid}</span></div>
-            <img class="qris-img" src={qris.image} width="240" height="240" alt={`QRIS donation QR code for ${qris.merchant}`} loading="lazy" decoding="async" />
-            <p class="qris-caption">{qris.caption}</p>
-            {qris.apps && <p class="qris-apps">{qris.apps}</p>}
-            {qris.note && <p class="qris-note">{qris.note}</p>}
+      )}
+      <div class="bank-card reveal d2" id="donate-card">
+        <div class="bc-head"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lock"/></svg> {bank.title}</div>
+        {bank.fields.map((f) => (
+          <div class="bank-field">
+            <div><div class="bf-label">{f.label}</div><div class="bf-value">{f.value}</div></div>
+            <button class="copy-btn" data-copy={f.copy} aria-label={f.aria}><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg><span class="copied-tip">Copied!</span></button>
           </div>
-        )}
+        ))}
+        {bank.notes.map((n) => <p class="bank-note" set:html={n} />)}
+        <p class="bank-contact" set:html={bank.contactHtml} />
       </div>
     </div>
     <p class="final-signoff reveal">{donate.signoff} <svg viewBox="0 0 24 24" width="22" style="color:var(--yellow);vertical-align:-3px" aria-hidden="true"><use href="#i-heart"/></svg></p>

@@ -1,12 +1,11 @@
 {
   "eyebrow": "Our Mission",
-  "heading": "Building bridges between people who want to help and kids who need it.",
+  "heading": "Community Assist aims to empower local communities in achieving educational, environmental, and economic sustainability.",
   "body": [
-    "Community Assist is a collective of Indonesian businesses, founded by <strong>Indosole</strong> and <strong>PNNY</strong>, raising funds to empower local communities through education, environment and opportunity.",
-    "Everything we raise goes to our partners' scholarship programs, helping children stay in school and build a future for themselves and their families."
+    "Established by a collective of Indonesian businesses, we raise funds to support &amp; promote organizations that drive change through education scholarships, youth outreach programs, community building, and sustainable initiatives."
   ],
   "collectiveEyebrow": "The collective behind it",
-  "collectiveHeading": "Founded by Bali businesses, powered by a foundation.",
+  "collectiveHeading": "Founded in Bali by businesses looking to give back and empower the community.",
   "partners": [
     {
       "photo": "/assets/img/partners/indosole-team.webp",
@@ -21,7 +20,7 @@
       "ragamLogo": false,
       "role": "Founding partner",
       "roleClass": "founding",
-      "text": "For over 17 years, Indosole has turned discarded tyres and river-collected sandals into recycled footwear, pioneering a future-forward model while creating jobs and community across Indonesia.",
+      "text": "For over 17 years, Indosole has turned discarded tires and river-collected sandals into recycled footwear, pioneering a future-forward model while creating jobs and community across Indonesia.",
       "instagramUrl": "https://instagram.com/indosole",
       "instagramHandle": "@indosole"
     },

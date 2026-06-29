@@ -15,7 +15,6 @@
       { "swatch": "var(--blue)", "label": "18 middle-school" },
       { "swatch": "var(--orchid)", "label": "8 high-school" },
       { "swatch": "var(--yellow)", "label": "4 university" }
-    ],
-    "transparencyHtml": "<b>69% of every rupiah</b> goes straight to the scholarship program."
+    ]
   }
 }

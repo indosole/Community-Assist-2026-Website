@@ -15,8 +15,14 @@ import cred from '../data/credibility.json';
     </div>
     <div class="cred-logos reveal">
       <p class="ll-label">{cred.partnersLabel}</p>
+      {/* First 6 are the biggest sponsors (founding partners + champion tier) — shown larger as a lead line. */}
+      <div class="logo-row logo-row--lead">
+        {cred.partnerLogos.slice(0, 6).map((l) => (
+          <img class="plogo plogo--lead" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" />
+        ))}
+      </div>
       <div class="logo-row">
-        {cred.partnerLogos.map((l) => (
+        {cred.partnerLogos.slice(6).map((l) => (
           <img class="plogo" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" />
         ))}
       </div>

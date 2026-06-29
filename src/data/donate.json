@@ -4,6 +4,7 @@
   "talkCta": { "label": "Talk to us", "href": "mailto:communityassist@indosole.com" },
   "qris": {
     "enabled": true,
+    "title": "Scan to donate",
     "image": "/assets/img/qris-ragam.svg",
     "logo": "/assets/img/qris-logo.png",
     "merchant": "RAGAM KEMANUSIAAN INDONESIA",

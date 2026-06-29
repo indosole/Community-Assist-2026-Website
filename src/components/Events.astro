@@ -27,6 +27,11 @@ const { bePart, pastEvents } = events;
           <a class="bp-item" href={it.mailto}><div class="bp-num"></div><h4>{it.title}</h4><p>{it.text}</p></a>
         ))}
       </div>
+      {bePart.cta && bePart.cta.href && (
+        <div class="bp-cta">
+          <a class="btn btn--primary btn--lg" href={bePart.cta.href} target="_blank" rel="noopener">{bePart.cta.label}</a>
+        </div>
+      )}
     </div>
 
     <div class="past-events">

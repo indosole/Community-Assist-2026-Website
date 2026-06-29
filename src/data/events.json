@@ -52,9 +52,9 @@
     "sub": "There's a way in for everyone, not just a cheque.",
     "items": [
       {
-        "title": "Sponsor or donate",
+        "title": "Partner or donate",
         "text": "Back the day at any level.",
-        "mailto": "mailto:communityassist@indosole.com?subject=Sponsor%20or%20donate%20at%20a%20Community%20Assist%20event"
+        "mailto": "mailto:communityassist@indosole.com?subject=Partner%20or%20donate%20at%20a%20Community%20Assist%20event"
       },
       {
         "title": "Register a team",
@@ -76,7 +76,11 @@
         "text": "Sell at the community market.",
         "mailto": "mailto:communityassist@indosole.com?subject=Book%20a%20community-market%20stall"
       }
-    ]
+    ],
+    "cta": {
+      "label": "Fill out the form →",
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLScCduPYMqery1kiYWuRavFuftEdhVN_WY1ebMeUO6tK-Q_kEw/viewform"
+    }
   },
   "pastEvents": {
     "eyebrow": "Five years in",

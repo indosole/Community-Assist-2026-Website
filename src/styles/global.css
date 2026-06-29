@@ -224,8 +224,11 @@ body.menu-open .mobile-sheet { transform: translateY(0); opacity: 1; visibility:
 .cred-logos .ll-label { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.9); margin-bottom: 22px; }
 /* Scoped to .cred-logos so it doesn't collide with the Sponsors-wall .logo-row below.
    Many small white logos, packed compactly, to back up the "200+ businesses" stat. */
-.cred-logos .logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(15px, 1.9vw, 24px) clamp(24px, 3.2vw, 44px); border-top: 1px solid rgba(255,255,255,.18); padding-top: clamp(26px, 3.4vw, 38px); }
+.cred-logos .logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(15px, 1.9vw, 24px) clamp(24px, 3.2vw, 44px); }
+/* Lead line — the biggest sponsors, sized up and carrying the divider above them. */
+.cred-logos .logo-row--lead { border-top: 1px solid rgba(255,255,255,.18); padding-top: clamp(26px, 3.4vw, 38px); margin-bottom: clamp(24px, 3.2vw, 40px); column-gap: clamp(34px, 4.6vw, 64px); }
 .cred-logos .plogo { height: clamp(17px, 1.95vw, 25px); width: auto; max-width: 104px; object-fit: contain; opacity: .9; filter: brightness(0) invert(1); transition: opacity .2s ease; }
+.cred-logos .plogo--lead { height: clamp(30px, 3.6vw, 46px); max-width: 190px; }
 .cred-logos .plogo:hover { opacity: 1; }
 
 /* ---------- Logo strip (scrolling marquee) ---------- */
@@ -287,6 +290,9 @@ body.menu-open .mobile-sheet { transform: translateY(0); opacity: 1; visibility:
 
 /* ---------- Mission ---------- */
 .mission-copy { max-width: 64ch; margin-inline: auto; text-align: center; }
+/* Mission heading is a full sentence (a statement), not a short title — size it
+   between .h2 and .h3 so it reads as intentional rather than dominating. */
+.mission-copy .h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); }
 .mission-copy p + p { margin-top: 1em; }
 .mission-copy .lead { margin-bottom: 0; margin-inline: auto; max-width: 56ch; }
 
@@ -382,8 +388,6 @@ body.menu-open .mobile-sheet { transform: translateY(0); opacity: 1; visibility:
 .donut-legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; font-size: .85rem; }
 .donut-legend li { display: inline-flex; align-items: center; gap: 8px; color: var(--body-2); }
 .donut-legend .swatch { width: 12px; height: 12px; border-radius: 3px; }
-.transparency { margin-top: 26px; font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; line-height: 1.35; }
-.transparency b { color: var(--blue); }
 
 /* ---------- 2026 goal (brand moment) ---------- */
 .goal { background: var(--blue); color: #fff; text-align: center; overflow: hidden; position: relative; min-height: clamp(520px, 39vw, 700px); }
@@ -484,6 +488,7 @@ a.bp-item:hover h4 { color: var(--blue); }
 .bp-item .bp-num::before { content: counter(bp); }
 .bp-item h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; }
 .bp-item p { font-size: .84rem; color: var(--grey); margin-top: 4px; }
+.bp-cta { text-align: center; margin-top: clamp(26px, 3.4vw, 38px); }
 
 .past-events { margin-top: clamp(48px,6vw,76px); }
 .pe-head { text-align: center; margin-bottom: clamp(22px,3vw,32px); }
@@ -540,10 +545,12 @@ a.bp-item:hover h4 { color: var(--blue); }
 /* ---------- Final CTA / bank ---------- */
 .final { background: var(--blue); color: #fff; overflow: hidden; }
 .final .wrap { position: relative; z-index: 2; }
-.final-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+.final-lead { text-align: center; max-width: 56ch; margin: 0 auto clamp(36px, 5vw, 56px); }
 .final h2 { color: #fff; font-size: clamp(2.2rem, 4.5vw, 3.2rem); }
-.final .f-sub { color: rgba(255,255,255,.88); margin: 18px 0 30px; font-size: 1.08rem; max-width: 42ch; }
-.final-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.final .f-sub { color: rgba(255,255,255,.88); margin: 18px auto 30px; font-size: 1.08rem; max-width: 50ch; }
+.final-cta { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.pay-cards { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: clamp(20px, 3vw, 36px); max-width: 920px; margin: 0 auto; }
+.pay-cards > * { flex: 1 1 360px; max-width: 440px; }
 
 .bank-card { background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: clamp(24px, 3vw, 34px); box-shadow: 0 24px 60px rgba(0,0,0,.28); }
 .bank-card .bc-head { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-bottom: 20px; }
@@ -563,16 +570,10 @@ a.bp-item:hover h4 { color: var(--blue); }
 .bank-contact { margin-top: 6px; font-size: .86rem; }
 .bank-contact a { font-weight: 600; }
 
-/* Donate card tabs — segmented switch between Bank transfer / QRIS */
-.pay-tabs { display: flex; gap: 6px; background: var(--tint-blue); padding: 5px; border-radius: 14px; margin-bottom: 22px; }
-.pay-tab { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 12px; border-radius: 10px; font-family: var(--font-display); font-weight: 700; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; color: var(--blue); transition: .2s var(--ease); }
-.pay-tab svg { width: 16px; height: 16px; }
-.pay-tab[aria-selected="true"] { background: var(--blue); color: #fff; box-shadow: 0 6px 16px rgba(70,97,173,.28); }
-.pay-tab[aria-selected="false"]:hover { background: rgba(70,97,173,.10); }
-.pay-panel[hidden] { display: none; }
-
-/* QRIS panel — centered scan-to-pay layout inside the donate card */
-.pay-panel--qris { text-align: center; }
+/* QRIS card — shares the .bank-card surface, centered scan-to-pay layout */
+.qris-card { background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: clamp(24px, 3vw, 34px); box-shadow: 0 24px 60px rgba(0,0,0,.28); text-align: center; }
+.qris-card .bc-head { display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+.qris-card .bc-head svg { width: 18px; height: 18px; }
 .qris-mark { height: 24px; width: auto; display: block; margin: 2px auto 14px; }
 .qris-merchant { font-family: var(--font-display); font-weight: 700; font-size: .82rem; letter-spacing: .02em; line-height: 1.3; }
 .qris-nmid { display: block; font-weight: 500; font-size: .7rem; letter-spacing: .04em; color: var(--grey); margin-top: 2px; }
@@ -628,7 +629,7 @@ a.bp-item:hover h4 { color: var(--blue); }
      works even with JS disabled (unlike the hamburger menu). */
   .nav-cta { display: inline-flex; }
 
-  .gift-grid, .give-ind, .final-grid { grid-template-columns: 1fr; }
+  .gift-grid, .give-ind { grid-template-columns: 1fr; }
 
   .cred-stats { grid-template-columns: repeat(2, 1fr); gap: 30px; }
   /* Once the 6 partner logos wrap, space-between strands them at opposite edges
