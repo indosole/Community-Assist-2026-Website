@@ -85,6 +85,7 @@
   "pastEvents": {
     "eyebrow": "Five years in",
     "title": "A look back at the community we&rsquo;ve built.",
+    "initialVisible": 12,
     "photos": [
       {
         "src": "/assets/img/pe-team.webp",
@@ -134,6 +135,41 @@
         "height": 821,
         "alt": "A contested layup under the basket during a tournament game",
         "delay": "d3"
+      },
+      {
+        "src": "/assets/img/pe-ragam-2023.webp",
+        "width": 800,
+        "height": 600,
+        "alt": "The community gathered in a Bali garden around a Community Assist basketball tournament poster.",
+        "delay": "d1"
+      },
+      {
+        "src": "/assets/img/pe-waterbom-1.webp",
+        "width": 800,
+        "height": 600,
+        "alt": "Scholarship students smiling around a table during a group workshop game.",
+        "delay": "d2"
+      },
+      {
+        "src": "/assets/img/pe-waterbom-4.webp",
+        "width": 901,
+        "height": 600,
+        "alt": "Scholarship students posing together poolside at Waterbom Bali.",
+        "delay": "d3"
+      },
+      {
+        "src": "/assets/img/pe-waterbom-6.webp",
+        "width": 450,
+        "height": 600,
+        "alt": "Students working together on an art and environment activity with markers.",
+        "delay": "d1"
+      },
+      {
+        "src": "/assets/img/pe-waterbom-7.webp",
+        "width": 800,
+        "height": 600,
+        "alt": "Students and mentors sitting together on the grass at a community day.",
+        "delay": "d2"
       }
     ]
   }

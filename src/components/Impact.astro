@@ -1,6 +1,63 @@
 ---
 import impact from '../data/impact.json';
-const { feature } = impact;
+import site from '../data/site.json';
+
+const EMAIL = (site.contact && site.contact.email) || 'communityassist@indosole.com';
+const year = impact.fundingYear || new Date().getFullYear();
+const nextYear = year + 1;
+
+const num = (n) => String(n); // 6 → "6", 3.5 → "3.5"
+const mailto = (subject, body) =>
+  `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+const stories = (impact.stories || []).map((s) => {
+  const status = s.status || 'seeking';
+  const isVideo = !!(s.videoWebm || s.videoMp4);
+
+  let badge = '', badgeClass = '', ctaLabel = '', ctaHref = '';
+  let showBar = false, barPct = 0, barLabel = '', askLabel = '';
+
+  if (status === 'graduated') {
+    badge = 'Graduated 🎓';
+    badgeClass = 'is-grad';
+    ctaLabel = 'Sponsor a new student';
+    ctaHref = mailto(
+      'Sponsor a student with Community Assist',
+      `Hi Community Assist,\n\nI'd like to sponsor a student's scholarship for the year (Rp 6M covers one child's full year). Please send me the details on how to get started.\n\nThank you!`
+    );
+  } else if (status === 'funded') {
+    badge = `Funded for ${year} 🎉`;
+    badgeClass = 'is-funded';
+    showBar = true;
+    barPct = 100;
+    if (s.goalM != null) barLabel = `Renews at Rp ${num(s.goalM)}M for ${nextYear}`;
+    ctaLabel = `Fund ${s.name}'s ${nextYear}`;
+    ctaHref = mailto(
+      `Help fund ${s.name}'s ${nextYear} scholarship`,
+      `Hi Community Assist,\n\nI'd like to help fund ${s.name}'s scholarship for ${nextYear}${s.goalM != null ? ` (Rp ${num(s.goalM)}M for the year)` : ''}. Please send me the details.\n\nThank you!`
+    );
+  } else {
+    badge = 'Seeking a sponsor';
+    badgeClass = 'is-seeking';
+    if (s.goalM != null && s.raisedM != null) {
+      showBar = true;
+      barPct = Math.max(0, Math.min(100, Math.round((s.raisedM / s.goalM) * 100)));
+      barLabel = `Rp ${num(s.raisedM)}M raised of Rp ${num(s.goalM)}M for their ${year} year`;
+    } else if (s.goalM != null) {
+      askLabel = `Rp ${num(s.goalM)}M / year`;
+    }
+    ctaLabel = `Support ${s.name}`;
+    ctaHref = mailto(
+      `Support ${s.name}'s scholarship`,
+      `Hi Community Assist,\n\nI'd like to help support ${s.name}'s scholarship${s.goalM != null ? ` (Rp ${num(s.goalM)}M for the year)` : ''}. Please send me the details on how to contribute.\n\nThank you!`
+    );
+  }
+
+  const paragraphs = s.paragraphs || (s.text ? [s.text] : []);
+  return { ...s, status, isVideo, paragraphs, badge, badgeClass, ctaLabel, ctaHref, showBar, barPct, barLabel, askLabel };
+});
+
+const multiple = stories.length > 1;
 ---
 
 <!-- ============ 4 · Impact stories ============ -->
@@ -9,41 +66,74 @@ const { feature } = impact;
     <div class="section-head reveal">
       <p class="eyebrow">{impact.eyebrow}</p>
       <h2 class="h2" id="impact-h">{impact.heading}</h2>
+      {impact.intro && <p class="lead impact-intro">{impact.intro}</p>}
     </div>
-    <div class="impact-grid">
-      <article class="story story-feature reveal">
-        <div class="story-video">
-          <video muted loop playsinline preload="none"
-                 poster={feature.poster}
-                 aria-label={feature.videoAlt}>
-            <source src={feature.videoWebm} type="video/webm" />
-            <source src={feature.videoMp4} type="video/mp4" />
-            <img src={feature.poster} width={feature.posterWidth} height={feature.posterHeight} alt={feature.posterAlt} />
-          </video>
-          <button type="button" class="video-unmute" aria-label="Unmute Chintya's testimonial">
-            <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-            <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg>
-          </button>
-        </div>
-        <div class="story-body">
-          <p class="s-tag">{feature.tag}</p>
-          <h3 class="s-name">{feature.name}</h3>
-          {feature.paragraphs.map((t) => <p class="s-text">{t}</p>)}
-        </div>
-      </article>
-      <div class="story-row">
-        {impact.sideStories.map((s) => (
-          <article class={`story story-side reveal ${s.delay}`}>
-            <div class="story-img"><img src={s.img} width={s.width} height={s.height} alt={s.alt} loading="lazy" style={`object-position:${s.objectPosition}`} /></div>
+
+    <div class="impact-carousel reveal">
+      <button type="button" class="carousel-arrow prev" aria-label="Previous student" hidden>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <ul class="impact-track" role="region" aria-label="Students you can support, scroll for more" tabindex="0">
+        {stories.map((s) => (
+          <li class="story-card">
+            <div class="story-media">
+              {s.isVideo ? (
+                <div class="story-video">
+                  <video muted loop playsinline preload="none"
+                         poster={s.img}
+                         data-name={s.name}
+                         aria-label={s.videoAlt}>
+                    {s.videoWebm && <source src={s.videoWebm} type="video/webm" />}
+                    {s.videoMp4 && <source src={s.videoMp4} type="video/mp4" />}
+                    <img src={s.img} width={s.width} height={s.height} alt={s.alt} />
+                  </video>
+                  <button type="button" class="video-unmute" aria-label={`Unmute ${s.name}'s testimonial`}>
+                    <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg>
+                  </button>
+                </div>
+              ) : (
+                <div class="story-img">
+                  <img src={s.img} width={s.width} height={s.height} alt={s.alt} loading="lazy" style={s.objectPosition ? `object-position:${s.objectPosition}` : undefined} />
+                </div>
+              )}
+              <span class={`s-status ${s.badgeClass}`}>{s.badge}</span>
+            </div>
+
             <div class="story-body">
               <p class="s-tag">{s.tag}</p>
               <h3 class="s-name">{s.name}</h3>
-              <p class="s-text">{s.text}</p>
+              {s.paragraphs.map((p) => <p class="s-text">{p}</p>)}
+
+              {s.showBar && (
+                <div class="card-fund">
+                  <div class={`card-bar${s.status === 'funded' ? ' is-complete' : ''}`} role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={s.barPct} aria-label={`Funding progress for ${s.name}`}>
+                    <span class="card-bar-fill" style={`width:${s.barPct}%`}></span>
+                  </div>
+                  {s.barLabel && <p class="card-bar-label">{s.barLabel}</p>}
+                </div>
+              )}
+              {!s.showBar && s.askLabel && <p class="card-ask">{s.askLabel}</p>}
+
+              <a href={s.ctaHref} class="btn btn--primary btn--lg card-cta">{s.ctaLabel} <span aria-hidden="true">→</span></a>
             </div>
-          </article>
+          </li>
+        ))}
+      </ul>
+
+      <button type="button" class="carousel-arrow next" aria-label="Next student" hidden>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    {multiple && (
+      <div class="carousel-dots" aria-label="Choose a student">
+        {stories.map((s, i) => (
+          <button type="button" class="carousel-dot" data-index={i} aria-label={`Show ${s.name}`} aria-current={i === 0 ? 'true' : undefined}></button>
         ))}
       </div>
-    </div>
+    )}
   </div>
 </section>

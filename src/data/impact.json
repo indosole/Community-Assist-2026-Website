@@ -1,35 +1,46 @@
 {
   "eyebrow": "Stories of Impact",
   "heading": "Why we do what we do.",
-  "feature": {
-    "tag": "From scholarship to graduate",
-    "name": "Chintya",
-    "poster": "/assets/img/impact-chintya.webp",
-    "posterWidth": 665,
-    "posterHeight": 520,
-    "videoWebm": "/assets/video/chintya.webm",
-    "videoMp4": "/assets/video/chintya.mp4",
-    "videoAlt": "Ni Putu Chintya Pratiwi in cap and gown sharing her graduation testimonial",
-    "posterAlt": "Ni Putu Chintya Pratiwi in cap and gown holding a Happy Graduation sign",
-    "paragraphs": [
-      "Ni Putu Chintya Pratiwi just graduated in accounting from Universitas Mahasaraswati Denpasar, and two weeks later she had already accepted her first job at an accounting firm.",
-      "Covering her education costs freed her family to build their own security. Her mum opened a laundry business that's now thriving, so she no longer has to clean kos to get by. When COVID cut her dad's salary in half, the program's extra help with clothes, school supplies, and a water filter carried them through the hardest stretch.",
-      "Today her dad's income has recovered, her mum has a steady business of her own, and Chintya contributes fully from her new job. The family now supports itself and is putting her two younger brothers through school. One scholarship, a whole family's future."
-    ]
-  },
-  "sideStories": [
+  "intro": "Meet some of the students your support keeps in school. Back someone directly, or sponsor a new student for the year.",
+  "fundingYear": 2026,
+  "stories": [
     {
+      "status": "graduated",
+      "tag": "From scholarship to graduate",
+      "name": "Chintya",
+      "img": "/assets/img/impact-chintya.webp",
+      "width": 665,
+      "height": 520,
+      "objectPosition": "50% 30%",
+      "alt": "Ni Putu Chintya Pratiwi in cap and gown holding a Happy Graduation sign",
+      "videoWebm": "/assets/video/chintya.webm",
+      "videoMp4": "/assets/video/chintya.mp4",
+      "videoAlt": "Ni Putu Chintya Pratiwi in cap and gown sharing her graduation testimonial",
+      "paragraphs": [
+        "Ni Putu Chintya Pratiwi just graduated in accounting from Universitas Mahasaraswati Denpasar, and two weeks later she had already accepted her first job at an accounting firm.",
+        "Covering her education costs freed her family to build their own security. Her mum opened a laundry business that's now thriving, so she no longer has to clean kos to get by. When COVID cut her dad's salary in half, the program's extra help with clothes, school supplies, and a water filter carried them through the hardest stretch.",
+        "Today her dad's income has recovered, her mum has a steady business of her own, and Chintya contributes fully from her new job. The family now supports itself and is putting her two younger brothers through school. One scholarship, a whole family's future."
+      ]
+    },
+    {
+      "status": "seeking",
       "tag": "Top of her class",
       "name": "Indah",
       "img": "/assets/img/impact-indah.webp",
       "width": 807,
       "height": 1076,
-      "objectPosition": "50% 70%",
+      "objectPosition": "50% 30%",
       "alt": "Indah, a high-school student in Denpasar",
-      "text": "Indah is the firstborn of two, and a high-schooler at SMA Saraswati Denpasar. She keeps top grades while leading the student council and theatre club, and still finds time to tutor younger children to help her parents earn extra income. She dreams of becoming a tax officer.",
-      "delay": "d1"
+      "paragraphs": [
+        "Indah is the firstborn of two and a high-schooler at SMA Saraswati Denpasar. Alongside keeping top grades, she throws herself into school life, leading the student council and the theatre club.",
+        "In her spare time she tutors younger children to help her parents earn a little extra. She dreams of becoming a tax officer, and with another year of support she'll keep climbing toward it.",
+        "A sponsor covers her tuition, learning materials and uniform for the year, and keeps one of Bali's brightest students in the classroom."
+      ],
+      "goalM": 6,
+      "raisedM": 3.5
     },
     {
+      "status": "seeking",
       "tag": "Back in the classroom",
       "name": "Wahyu",
       "img": "/assets/img/impact-wahyu.webp",
@@ -37,8 +48,13 @@
       "height": 1012,
       "objectPosition": "50% 15%",
       "alt": "Wahyu, a middle-school student in his school uniform",
-      "text": "Thanks to supporters last year, Wahyu received a Ragam Foundation scholarship through Community Assist 2024, and he's back in school, now in 8th grade. With another year of support he'll finish his studies, and that same chance can reach more children across Bali.",
-      "delay": "d2"
+      "paragraphs": [
+        "Thanks to the generosity of supporters last year, Wahyu received an education scholarship through the Ragam Foundation's Scholarship Program, made possible by Community Assist 2024. He's now enrolled in 8th grade and back in school.",
+        "With continued support this year, we can help Wahyu complete his studies, and give that same opportunity to more children across Bali.",
+        "One year of sponsorship keeps him in class, in uniform, and on track to finish school."
+      ],
+      "goalM": 6,
+      "raisedM": 2.5
     }
   ]
 }

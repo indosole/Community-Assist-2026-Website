@@ -154,59 +154,128 @@
     fillBar();
   }
 
-  /* ---------- Impact testimonial video ---------- */
-  try {
-    var storyVideo = doc.querySelector(".story-video");
-    if (storyVideo) {
-      var vid = storyVideo.querySelector("video");
-      var unmuteBtn = storyVideo.querySelector(".video-unmute");
+  /* ---------- Impact testimonial video(s) ---------- */
+  // Works for any number of video cards in the impact carousel.
+  var setupVideoCard = function (storyVideo) {
+    var vid = storyVideo.querySelector("video");
+    var unmuteBtn = storyVideo.querySelector(".video-unmute");
+    var name = (vid && vid.getAttribute("data-name")) || "this student";
 
-      // Present the control as a Play button (used for reduced-motion and when
-      // the browser blocks muted autoplay).
-      var showPlayAffordance = function () {
-        storyVideo.classList.add("is-reduced");
-        if (unmuteBtn) unmuteBtn.setAttribute("aria-label", "Play Chintya's testimonial");
-      };
+    // Present the control as a Play button (reduced-motion / blocked autoplay).
+    var showPlayAffordance = function () {
+      storyVideo.classList.add("is-reduced");
+      if (unmuteBtn) unmuteBtn.setAttribute("aria-label", "Play " + name + "'s testimonial");
+    };
 
-      // Autoplay (muted) only when in view and motion is allowed; pause when out of view.
-      if (vid && !reduce && "IntersectionObserver" in window) {
-        var vio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) {
-              var p = vid.play();
-              if (p && p.then) {
-                p.then(function () { storyVideo.classList.remove("is-reduced"); }).catch(showPlayAffordance);
-              }
-            } else {
-              vid.pause();
+    // Autoplay (muted) only when in view and motion is allowed; pause when out of view.
+    if (vid && !reduce && "IntersectionObserver" in window) {
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            var p = vid.play();
+            if (p && p.then) {
+              p.then(function () { storyVideo.classList.remove("is-reduced"); }).catch(showPlayAffordance);
             }
-          });
-        }, { threshold: 0.4 });
-        vio.observe(vid);
-      } else if (vid && unmuteBtn && reduce) {
-        // Reduced motion: no autoplay. Present the control as a play button.
-        showPlayAffordance();
-      }
-
-      // Unmute button: unmute + restart from the top; click again to re-mute.
-      // Accessible name reflects the next action; no aria-pressed (avoids a
-      // contradictory "action + toggle-state" announcement).
-      if (vid && unmuteBtn) {
-        unmuteBtn.addEventListener("click", function () {
-          if (vid.muted) {
-            vid.muted = false;
-            vid.currentTime = 0;
-            vid.play().catch(function () {});
-            storyVideo.classList.add("is-unmuted");
-            storyVideo.classList.remove("is-reduced");
-            unmuteBtn.setAttribute("aria-label", "Mute Chintya's testimonial");
           } else {
-            vid.muted = true;
-            storyVideo.classList.remove("is-unmuted");
-            unmuteBtn.setAttribute("aria-label", "Unmute Chintya's testimonial");
+            vid.pause();
           }
         });
+      }, { threshold: 0.4 });
+      vio.observe(vid);
+    } else if (vid && unmuteBtn && reduce) {
+      showPlayAffordance();
+    }
+
+    // Unmute button: unmute + restart from the top; click again to re-mute.
+    if (vid && unmuteBtn) {
+      unmuteBtn.addEventListener("click", function () {
+        if (vid.muted) {
+          vid.muted = false;
+          vid.currentTime = 0;
+          vid.play().catch(function () {});
+          storyVideo.classList.add("is-unmuted");
+          storyVideo.classList.remove("is-reduced");
+          unmuteBtn.setAttribute("aria-label", "Mute " + name + "'s testimonial");
+        } else {
+          vid.muted = true;
+          storyVideo.classList.remove("is-unmuted");
+          unmuteBtn.setAttribute("aria-label", "Unmute " + name + "'s testimonial");
+        }
+      });
+    }
+  };
+
+  try {
+    doc.querySelectorAll(".story-video").forEach(setupVideoCard);
+  } catch (e) { /* no-op */ }
+
+  /* ---------- Impact carousel (one card at a time: arrows + dots) ---------- */
+  try {
+    var carousel = doc.querySelector(".impact-carousel");
+    var track = carousel && carousel.querySelector(".impact-track");
+    var cards = track ? track.querySelectorAll(".story-card") : [];
+    if (track && cards.length) {
+      var prevBtn = carousel.querySelector(".carousel-arrow.prev");
+      var nextBtn = carousel.querySelector(".carousel-arrow.next");
+      var dotsWrap = carousel.parentNode.querySelector(".carousel-dots");
+      var dots = dotsWrap ? dotsWrap.querySelectorAll(".carousel-dot") : [];
+
+      var stepSize = function () {
+        return cards[0].getBoundingClientRect().width + 24; // card width + gap
+      };
+
+      // Which card is most in view.
+      var activeIndex = function () {
+        return Math.round(track.scrollLeft / stepSize());
+      };
+
+      var atStart = function () { return track.scrollLeft <= 2; };
+      var atEnd = function () { return track.scrollLeft >= track.scrollWidth - track.clientWidth - 2; };
+
+      var update = function () {
+        var multi = cards.length > 1;
+        var wide = window.matchMedia("(min-width: 769px)").matches;
+        var showArrows = multi && wide;
+        if (prevBtn) { prevBtn.hidden = !showArrows; prevBtn.disabled = atStart(); }
+        if (nextBtn) { nextBtn.hidden = !showArrows; nextBtn.disabled = atEnd(); }
+
+        var idx = activeIndex();
+        for (var i = 0; i < dots.length; i++) {
+          if (i === idx) dots[i].setAttribute("aria-current", "true");
+          else dots[i].removeAttribute("aria-current");
+        }
+      };
+
+      var goTo = function (i) {
+        i = Math.max(0, Math.min(cards.length - 1, i));
+        track.scrollTo({ left: i * stepSize(), behavior: reduce ? "auto" : "smooth" });
+      };
+
+      if (prevBtn) prevBtn.addEventListener("click", function () { goTo(activeIndex() - 1); });
+      if (nextBtn) nextBtn.addEventListener("click", function () { goTo(activeIndex() + 1); });
+      for (var d = 0; d < dots.length; d++) {
+        (function (n) { dots[n].addEventListener("click", function () { goTo(n); }); })(d);
       }
+      track.addEventListener("scroll", function () { window.requestAnimationFrame(update); }, { passive: true });
+      window.addEventListener("resize", update, { passive: true });
+      update();
+    }
+  } catch (e) { /* no-op */ }
+
+  /* ---------- "Show more" photos in the Five-years gallery ---------- */
+  try {
+    var moreBtn = doc.querySelector(".pe-more-btn");
+    var gallery = doc.querySelector(".pe-gallery");
+    if (moreBtn && gallery) {
+      moreBtn.addEventListener("click", function () {
+        var expanded = gallery.classList.toggle("show-all");
+        if (expanded) {
+          // Reveal the newly shown photos (they never intersected while hidden).
+          gallery.querySelectorAll(".pe-photo.is-extra").forEach(function (el) { el.classList.add("in"); });
+        }
+        moreBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+        moreBtn.textContent = expanded ? "Show fewer photos" : "Show more photos";
+      });
     }
   } catch (e) { /* no-op */ }
 })();

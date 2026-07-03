@@ -1,6 +1,8 @@
 ---
 import events from '../data/events.json';
 const { bePart, pastEvents } = events;
+const initialVisible = pastEvents.initialVisible;
+const hasMore = initialVisible != null && pastEvents.photos.length > initialVisible;
 ---
 
 <!-- ============ 8 · The Events ============ -->
@@ -40,10 +42,15 @@ const { bePart, pastEvents } = events;
         <h3 class="pe-title" set:html={pastEvents.title} />
       </div>
       <div class="pe-gallery">
-        {pastEvents.photos.map((p) => (
-          <figure class={`pe-photo reveal${p.delay ? ` ${p.delay}` : ''}`}><img src={p.src} width={p.width} height={p.height} alt={p.alt} loading="lazy" /></figure>
+        {pastEvents.photos.map((p, i) => (
+          <figure class={`pe-photo reveal${p.delay ? ` ${p.delay}` : ''}${initialVisible != null && i >= initialVisible ? ' is-extra' : ''}`}><img src={p.src} width={p.width} height={p.height} alt={p.alt} loading="lazy" /></figure>
         ))}
       </div>
+      {hasMore && (
+        <div class="pe-more">
+          <button type="button" class="btn btn--outline pe-more-btn" aria-expanded="false">Show more photos</button>
+        </div>
+      )}
     </div>
   </div>
 </section>

@@ -193,36 +193,40 @@ collections:
         fields:
           - { label: "Eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Heading", name: "heading", widget: "string" }
-          - label: "Feature story (video)"
-            name: "feature"
-            widget: "object"
+          - { label: "Intro line", name: "intro", widget: "text", required: false }
+          - { label: "Funding year", name: "fundingYear", widget: "number", value_type: "int", hint: "Shown in the 'Funded for 2026' badge; next year (2027) is worked out automatically." }
+          - label: "Students"
+            name: "stories"
+            label_singular: "Student"
+            widget: "list"
+            summary: "{{fields.name}} · {{fields.status}}"
+            hint: "Each student is a card in the scrollable carousel. Add, remove or drag to reorder."
             fields:
-              - { label: "Tag", name: "tag", widget: "string" }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                default: "seeking"
+                options:
+                  - { label: "Seeking a sponsor", value: "seeking" }
+                  - { label: "Funded (this year covered)", value: "funded" }
+                  - { label: "Graduated", value: "graduated" }
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Poster image", name: "poster", widget: "image" }
-              - { label: "Poster width", name: "posterWidth", widget: "number", required: false, value_type: "int" }
-              - { label: "Poster height", name: "posterHeight", widget: "number", required: false, value_type: "int" }
-              - { label: "Video (WebM)", name: "videoWebm", widget: "file", required: false }
-              - { label: "Video (MP4)", name: "videoMp4", widget: "file", required: false }
-              - { label: "Video aria-label", name: "videoAlt", widget: "string" }
-              - { label: "Poster alt", name: "posterAlt", widget: "string" }
-              - label: "Paragraphs"
+              - { label: "Tag (small label above the name)", name: "tag", widget: "string" }
+              - label: "Story paragraphs"
                 name: "paragraphs"
                 widget: "list"
+                hint: "The student's story, one paragraph per item. Two or three short paragraphs reads best."
                 field: { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "Side stories"
-            name: "sideStories"
-            widget: "list"
-            fields:
-              - { label: "Tag", name: "tag", widget: "string" }
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Image", name: "img", widget: "image" }
-              - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
-              - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
-              - { label: "Image focus (object-position)", name: "objectPosition", widget: "string", required: false }
-              - { label: "Alt", name: "alt", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
-              - { label: "Animation delay", name: "delay", widget: "hidden" }
+              - { label: "Photo", name: "img", widget: "image", hint: "For a video card this is the cover/poster image." }
+              - { label: "Photo width", name: "width", widget: "number", required: false, value_type: "int" }
+              - { label: "Photo height", name: "height", widget: "number", required: false, value_type: "int" }
+              - { label: "Photo focus (object-position)", name: "objectPosition", widget: "string", required: false, hint: "e.g. '50% 30%' to shift the crop up/down." }
+              - { label: "Photo alt text", name: "alt", widget: "string" }
+              - { label: "Goal (Rp millions)", name: "goalM", widget: "number", required: false, value_type: "float", hint: "The amount to raise for this student. Rp 6M covers one school year; set it higher to cover several years through to graduation." }
+              - { label: "Raised so far (Rp millions)", name: "raisedM", widget: "number", required: false, value_type: "float", hint: "How much has been raised toward the goal. This fills the progress bar. Placeholder numbers are fine for now, adjust anytime; leave blank to hide the bar and just show the yearly ask." }
+              - { label: "Video (WebM, optional)", name: "videoWebm", widget: "file", required: false }
+              - { label: "Video (MP4, optional)", name: "videoMp4", widget: "file", required: false, hint: "Add a video to turn this card into a testimonial with an unmute button." }
+              - { label: "Video aria-label", name: "videoAlt", widget: "string", required: false }
 
       # 4b · Logo strip (scrolling marquee)
       - file: "src/data/logostrip.json"
@@ -394,6 +398,7 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string", hint: "HTML allowed" }
+              - { label: "Photos shown before 'Show more'", name: "initialVisible", widget: "number", required: false, value_type: "int", hint: "How many photos to show before a 'Show more' button appears. Leave blank to always show all." }
               - label: "Photos"
                 name: "photos"
                 widget: "list"
