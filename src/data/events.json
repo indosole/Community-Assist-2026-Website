@@ -170,6 +170,20 @@
         "height": 600,
         "alt": "Students and mentors sitting together on the grass at a community day.",
         "delay": "d2"
+      },
+      {
+        "src": "/assets/img/pe-family.webp",
+        "width": 860,
+        "height": 600,
+        "alt": "A scholarship student's family together at home in Bali.",
+        "delay": "d3"
+      },
+      {
+        "src": "/assets/img/pe-friends.webp",
+        "width": 795,
+        "height": 600,
+        "alt": "Four young students smiling together at home.",
+        "delay": "d1"
       }
     ]
   }

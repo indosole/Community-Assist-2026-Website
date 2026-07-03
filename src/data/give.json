@@ -27,7 +27,8 @@
           "Logo on event banners",
           "Small logo on street banners",
           "One banner set on-site",
-          "Group post + story mention"
+          "Instagram Collab post, shared to both our feeds",
+          "Story mentions + tagged in event recaps"
         ],
         "mailto": "mailto:communityassist@indosole.com?subject=Community%20partnership%20(Rp%2020M)",
         "ctaLabel": "Become a partner"
@@ -44,7 +45,8 @@
           "Large logo on a banner",
           "Two banners + a standee",
           "Live PA announcement",
-          "Dedicated carousel slide + story"
+          "Instagram Collab post + dedicated carousel feature",
+          "Featured in the post-event recap Reel"
         ],
         "mailto": "mailto:communityassist@indosole.com?subject=Game%20Changer%20partnership%20(Rp%2060M)",
         "ctaLabel": "Become a partner"
@@ -61,12 +63,13 @@
           "Premium street-banner placement",
           "Entrance & court banners + activation booth",
           "Live PA + company spotlight",
-          "30s Reel + 8-slide carousel + story"
+          "Custom 30s social ad video, co-posted as a Collab",
+          "Multiple Collab posts + carousel & story series all season"
         ],
         "mailto": "mailto:communityassist@indosole.com?subject=Champion%20partnership%20(Rp%20120M)",
         "ctaLabel": "Become a partner"
       }
     ],
-    "partnerNoteHtml": "Prefer a yearly bundle? The <strong>Community Partner</strong> package (Rp 20M/yr) adds full event registration, 2 auction-dinner tickets and quarterly marketing support. <a href=\"mailto:communityassist@indosole.com?subject=Community%20Partner%20package%20(Rp%2020M%2Fyr)\">Talk to us →</a>"
+    "partnerNoteHtml": "Prefer a yearly bundle? The <strong>Community Partner</strong> package (Rp 20M/yr) adds full event registration, 2 auction-dinner tickets, a custom social ad video and quarterly marketing support. <a href=\"mailto:communityassist@indosole.com?subject=Community%20Partner%20package%20(Rp%2020M%2Fyr)\">Talk to us →</a>"
   }
 }
