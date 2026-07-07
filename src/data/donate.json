@@ -1,26 +1,54 @@
 {
   "heading": "Ready to change a future?",
   "sub": "Every gift goes straight to a child's education, with 69% direct to the scholarship program. Receipts available on request.",
-  "talkCta": { "label": "Talk to us", "href": "mailto:communityassist@indosole.com" },
+  "talkCta": {
+    "label": "Talk to us",
+    "href": "mailto:communityassist@indosole.com"
+  },
   "qris": {
     "enabled": true,
-    "title": "Scan to donate",
-    "image": "/assets/img/qris-ragam.svg",
-    "logo": "/assets/img/qris-logo.png",
-    "merchant": "RAGAM KEMANUSIAAN INDONESIA",
-    "nmid": "NMID ID1026532445545",
     "caption": "Open any bank or e-wallet app, scan, and pay.",
-    "apps": "GoPay · OVO · DANA · ShopeePay · BCA · BNI — all QRIS apps",
-    "note": "Goes to the same foundation account as bank transfer."
+    "merchant": "RAGAM KEMANUSIAAN INDONESIA",
+    "logo": "/assets/img/qris-logo.png",
+    "apps": "GoPay · OVO · DANA · ShopeePay · BCA · CIMB — all QRIS apps",
+    "note": "Goes to the same foundation account as bank transfer.",
+    "title": "Scan to donate",
+    "nmid": "NMID ID1026532445545",
+    "image": "/assets/img/qris-ragam.svg"
   },
   "bank": {
     "title": "Donate by bank transfer",
     "fields": [
-      { "label": "Account name", "value": "Ragam Kemanusiaan Indonesia", "copy": "Ragam Kemanusiaan Indonesia", "aria": "Copy account name" },
-      { "label": "Account number", "value": "800210750800", "copy": "800210750800", "aria": "Copy account number" },
-      { "label": "Bank", "value": "BNI · code 008", "copy": "008", "aria": "Copy bank code" },
-      { "label": "SWIFT", "value": "BNIAIDJAXXX", "copy": "BNIAIDJAXXX", "aria": "Copy SWIFT code" },
-      { "label": "Bank address", "value": "Canggu Berawa, Jl. Subak Sari No. 11, Tibubeneng, Bali 80361", "copy": "Canggu Berawa, Jl. Subak Sari No. 11, Tibubeneng, Bali 80361", "aria": "Copy bank address" }
+      {
+        "label": "Account name",
+        "value": "Ragam Kemanusiaan Indonesia",
+        "copy": "Ragam Kemanusiaan Indonesia",
+        "aria": "Copy account name"
+      },
+      {
+        "label": "Account number",
+        "value": "800210750800",
+        "copy": "800210750800",
+        "aria": "Copy account number"
+      },
+      {
+        "label": "Bank",
+        "value": "BNI · code 008",
+        "copy": "008",
+        "aria": "Copy bank code"
+      },
+      {
+        "label": "SWIFT",
+        "value": "BNIAIDJAXXX",
+        "copy": "BNIAIDJAXXX",
+        "aria": "Copy SWIFT code"
+      },
+      {
+        "label": "Bank address",
+        "value": "Canggu Berawa, Jl. Subak Sari No. 11, Tibubeneng, Bali 80361",
+        "copy": "Canggu Berawa, Jl. Subak Sari No. 11, Tibubeneng, Bali 80361",
+        "aria": "Copy bank address"
+      }
     ],
     "notes": [
       "Transfers go to <strong>Ragam Kemanusiaan Indonesia</strong>, the foundation behind our scholarship program. Send us your transfer confirmation for a receipt.",
