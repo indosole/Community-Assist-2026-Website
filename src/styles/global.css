@@ -742,6 +742,9 @@ a.bp-item:hover h4 { color: var(--blue); }
   /* On phones the slide is too short to overlay buttons legibly — drop them
      into a light panel below the image, full-width and tappable. */
   .hero-overlay { position: static; background: var(--paper); padding-block: 24px; }
+  /* The banner art is landscape, so on a phone it renders as a thin strip.
+     Crop it to a portrait-ish frame and let the image zoom to fill. */
+  .hero-slide { aspect-ratio: 9 / 10; height: auto; max-height: 72vh; object-fit: cover; object-position: 50% 42%; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { width: 100%; }
   /* Light panel: recolour the elements that were styled for the dark overlay. */
@@ -749,6 +752,10 @@ a.bp-item:hover h4 { color: var(--blue); }
   .hero-cta .btn--ghost-light:hover { background: var(--blue); color: #fff; }
   .trust-chip--hero { color: var(--grey); }
   .trust-chip--hero b { color: var(--ink); }
+  /* Phone: justify the partner logos to the page gutters rather than clustering
+     them centered, so each row spans the full width of .wrap. */
+  .cred-logos .logo-row { justify-content: space-between; column-gap: 14px; row-gap: 18px; }
+  .cred-logos .plogo--lead { height: 26px; max-width: 155px; }
   .benefit-cards { grid-template-columns: 1fr 1fr; gap: 12px; }
   .benefit { padding: 18px 16px; }
   .events-grid { grid-template-columns: 1fr; }
