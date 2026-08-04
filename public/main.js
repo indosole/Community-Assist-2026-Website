@@ -278,4 +278,42 @@
       });
     }
   } catch (e) { /* no-op */ }
+
+  /* ---------- Partner logo wall: centre the last row on phones ----------
+     On phones the rows are justified to the page gutters, but a final row with
+     only two or three logos ends up with a canyon between them. Flexbox can't
+     target a single line from CSS, so tag the ends of the last line here: auto
+     margins are resolved per flex line, so that line centres itself while the
+     full lines above stay justified. */
+  try {
+    var logoRows = doc.querySelectorAll(".cred-logos .logo-row");
+    var justifyMq = window.matchMedia("(max-width: 620px)");
+    if (logoRows.length) {
+      var centreLastRow = function () {
+        for (var r = 0; r < logoRows.length; r++) {
+          var items = logoRows[r].children;
+          for (var c = 0; c < items.length; c++) {
+            items[c].classList.remove("lr-row-start", "lr-row-end");
+          }
+          if (!justifyMq.matches || items.length < 2) continue;
+          /* A new line starts wherever an item sits at or left of its predecessor. */
+          var start = 0;
+          for (var i = 1; i < items.length; i++) {
+            if (items[i].offsetLeft <= items[i - 1].offsetLeft) start = i;
+          }
+          if (start === 0) continue;  // never wrapped — leave it justified
+          items[start].classList.add("lr-row-start");
+          items[items.length - 1].classList.add("lr-row-end");
+        }
+      };
+      var reflow;
+      window.addEventListener("resize", function () {
+        window.clearTimeout(reflow);
+        reflow = window.setTimeout(centreLastRow, 120);
+      }, { passive: true });
+      /* Re-measure once the logos have their real widths. */
+      window.addEventListener("load", centreLastRow);
+      centreLastRow();
+    }
+  } catch (e) { /* no-op */ }
 })();

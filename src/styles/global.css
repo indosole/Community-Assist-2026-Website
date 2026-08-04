@@ -756,6 +756,10 @@ a.bp-item:hover h4 { color: var(--blue); }
      them centered, so each row spans the full width of .wrap. */
   .cred-logos .logo-row { justify-content: space-between; column-gap: 14px; row-gap: 18px; }
   .cred-logos .plogo--lead { height: 26px; max-width: 155px; }
+  /* Tagged by main.js on the ends of the final (short) row — the auto margins
+     eat that line's free space so it centres instead of spreading. */
+  .cred-logos .lr-row-start { margin-inline-start: auto; }
+  .cred-logos .lr-row-end { margin-inline-end: auto; }
   .benefit-cards { grid-template-columns: 1fr 1fr; gap: 12px; }
   .benefit { padding: 18px 16px; }
   .events-grid { grid-template-columns: 1fr; }
