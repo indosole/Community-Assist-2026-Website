@@ -367,6 +367,8 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Venue", name: "venue", widget: "string" }
               - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Link URL (optional)", name: "linkHref", widget: "string", required: false, hint: "Leave blank for no link. Paste a full URL (https://...) or a mailto: address. It appears as a link under the blurb." }
+              - { label: "Link text (optional)", name: "linkLabel", widget: "string", required: false, hint: "Wording of the link, e.g. 'Get tickets'. Defaults to 'Find out more'." }
               - { label: "Image", name: "img", widget: "image" }
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }

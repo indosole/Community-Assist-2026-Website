@@ -16,7 +16,18 @@ const hasMore = initialVisible != null && pastEvents.photos.length > initialVisi
       {events.cards.map((c) => (
         <article class={`event-card reveal${c.delay ? ` ${c.delay}` : ''}`}>
           <div class="event-img"><span class="event-date">{c.date}</span><img src={c.img} width={c.width} height={c.height} alt={c.alt} loading="lazy" /></div>
-          <div class="event-body"><h3>{c.name}</h3><p class="event-venue">{c.venue}</p><p>{c.blurb}</p></div>
+          <div class="event-body">
+            <h3>{c.name}</h3>
+            <p class="event-venue">{c.venue}</p>
+            <p>{c.blurb}</p>
+            {c.linkHref && (
+              <a
+                class="event-link"
+                href={c.linkHref}
+                {...(/^https?:\/\//i.test(c.linkHref) ? { target: '_blank', rel: 'noopener' } : {})}
+              >{c.linkLabel || 'Find out more'} <span aria-hidden="true">&rarr;</span></a>
+            )}
+          </div>
         </article>
       ))}
     </div>
