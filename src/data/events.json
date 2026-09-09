@@ -18,12 +18,14 @@
     {
       "delay": "d1",
       "img": "/assets/img/event-basketball.webp",
+      "linkHref": "https://docs.google.com/forms/d/e/1FAIpQLSfP-ss2IgmK_8wXVsyFzzvVhh8Cv32CfcHWe4ikNCDFntwq9A/viewform?usp=header",
       "width": 800,
       "height": 467,
       "alt": "Players in a 3-on-3 basketball game",
       "name": "3x3 Charity Basketball",
       "date": "7 Nov 2026",
       "venue": "Our flagship tournament",
+      "linkLabel": "Sign up here",
       "blurb": "Five years running. The event that started it all."
     },
     {
