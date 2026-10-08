@@ -5,15 +5,15 @@
   "studentRightWidth": 508,
   "studentRightHeight": 679,
   "studentLeftHeight": 665,
-  "eyebrow": "Our 2026 goal",
-  "subHtml": "to fund <strong>30 scholarships</strong> and a dedicated community manager for the year ahead.",
-  "progress": 10,
+  "eyebrow": "Our 2026/2027 goal",
+  "subHtml": "to fund <strong>50 scholarships</strong> and a dedicated community manager for the year ahead.",
+  "progress": 30,
   "primaryCta": {
     "label": "Donate",
     "href": "#donate"
   },
   "progressLabelLeft": "Funding in progress",
-  "amount": "Rp 532,000,000",
+  "amount": "Rp 816,978,370",
   "secondaryCta": {
     "label": "See ways to give",
     "href": "#give"
