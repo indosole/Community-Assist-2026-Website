@@ -3,19 +3,6 @@
   "heading": "The events.",
   "cards": [
     {
-      "delay": "",
-      "img": "/assets/img/1.jpeg",
-      "linkHref": "https://docs.google.com/forms/d/e/1FAIpQLSdxKERkIy5Fa_hy758Hlpuf6REkgaFWBUxN0TsFmVQpH0clYg/viewform?usp=header",
-      "width": 900,
-      "height": 635,
-      "alt": "A long shared pizza on a table at a community gathering",
-      "name": "Merch Launch and Charity Bocce Ball Tournament ",
-      "date": "19 Sep 2026",
-      "venue": "Luigi's",
-      "linkLabel": "Sign up here",
-      "blurb": "The 2026 merch drop and bocce."
-    },
-    {
       "delay": "d1",
       "img": "/assets/img/event-basketball.webp",
       "linkHref": "https://docs.google.com/forms/d/e/1FAIpQLSfP-ss2IgmK_8wXVsyFzzvVhh8Cv32CfcHWe4ikNCDFntwq9A/viewform?usp=header",
@@ -49,6 +36,19 @@
       "date": "TBA",
       "venue": "Times Beach Warung",
       "blurb": "Dodgeball, a sandcastle contest and a community market by the shore."
+    },
+    {
+      "delay": "",
+      "img": "/assets/img/1.jpeg",
+      "linkHref": "",
+      "width": 900,
+      "height": 635,
+      "alt": "A long shared pizza on a table at a community gathering",
+      "name": "Merch Launch and Charity Bocce Ball Tournament ",
+      "date": "TBA ",
+      "venue": "Luigi's",
+      "linkLabel": "Sign up here",
+      "blurb": "The 2027 merch drop and bocce."
     }
   ],
   "bePart": {
