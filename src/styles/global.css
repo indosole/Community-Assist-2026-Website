@@ -785,3 +785,14 @@ a.bp-item:hover h4 { color: var(--blue); }
 @media (max-width: 480px) {
   .brand .brand-full { height: 42px; }
 }
+
+/* Additional partner opportunities (Ways to Give → businesses) */
+.extras { margin-top: 44px; }
+.extras-h { text-align: center; margin-bottom: 20px; }
+.extras-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.extra { background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius-lg); padding: 20px 22px; }
+.extra .x-price { display: inline-block; font-family: var(--font-display); font-weight: 700; color: var(--blue); font-size: 1.05rem; margin-bottom: 6px; }
+.extra h4 { font-size: 1rem; margin-bottom: 4px; }
+.extra p { font-size: .9rem; color: var(--grey); }
+@media (max-width: 900px) { .extras-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .extras-grid { grid-template-columns: 1fr; } }
