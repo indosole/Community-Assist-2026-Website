@@ -562,6 +562,7 @@ body.menu-open .mobile-sheet { transform: translateY(0); opacity: 1; visibility:
 .event-link { margin-top: auto; padding-top: 12px; align-self: flex-start; font-size: .86rem; font-weight: 700; color: var(--blue); text-decoration: none; }
 .event-link:hover { text-decoration: underline; }
 .event-link span { display: inline-block; transition: transform .2s var(--ease); }
+.event-link + .event-link { margin-top: 0; padding-top: 6px; }
 .event-link:hover span { transform: translateX(3px); }
 
 .bepart { margin-top: clamp(40px, 5vw, 64px); background: var(--tint-blue); border-radius: var(--radius-lg); padding: clamp(28px, 4vw, 44px); }
