@@ -27,6 +27,13 @@ const hasMore = initialVisible != null && pastEvents.photos.length > initialVisi
                 {...(/^https?:\/\//i.test(c.linkHref) ? { target: '_blank', rel: 'noopener' } : {})}
               >{c.linkLabel || 'Find out more'} <span aria-hidden="true">&rarr;</span></a>
             )}
+            {c.link2Href && (
+              <a
+                class="event-link"
+                href={c.link2Href}
+                {...(/^https?:\/\//i.test(c.link2Href) ? { target: '_blank', rel: 'noopener' } : {})}
+              >{c.link2Label || 'Find out more'} <span aria-hidden="true">&rarr;</span></a>
+            )}
           </div>
         </article>
       ))}
