@@ -351,6 +351,15 @@ collections:
                   - { label: "Email link (mailto)", name: "mailto", widget: "string" }
                   - { label: "Button label", name: "ctaLabel", widget: "string" }
               - { label: "Partner note", name: "partnerNoteHtml", widget: "text", hint: "HTML allowed" }
+              - { label: "Additional opportunities heading", name: "extrasHeading", widget: "string", required: false }
+              - label: "Additional opportunities"
+                name: "extras"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Price", name: "price", widget: "string" }
 
       # 8 · Events
       - file: "src/data/events.json"
