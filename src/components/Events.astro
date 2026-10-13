@@ -51,7 +51,7 @@ const hasMore = initialVisible != null && pastEvents.photos.length > initialVisi
       <p class="bp-sub">{bePart.sub}</p>
       <div class="bepart-grid">
         {bePart.items.map((it) => (
-          <a class="bp-item" href={it.mailto}><div class="bp-num"></div><h4>{it.title}</h4><p>{it.text}</p></a>
+          <a class="bp-item" href={it.mailto} {...(it.mailto?.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}><div class="bp-num"></div><h4>{it.title}</h4><p>{it.text}</p></a>
         ))}
       </div>
       {bePart.cta && bePart.cta.href && (
