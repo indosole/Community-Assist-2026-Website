@@ -36,10 +36,10 @@
       "height": 151
     },
     {
-      "src": "/assets/img/partners/under-armour-white.webp",
-      "alt": "Under Armour",
-      "width": 436,
-      "height": 116
+      "src": "/assets/img/partners/project-black-white.webp",
+      "alt": "Project: Black",
+      "width": 602,
+      "height": 68
     },
     {
       "src": "/assets/img/partners/nuanu-social-fund-white.webp",
@@ -48,34 +48,10 @@
       "height": 116
     },
     {
-      "src": "/assets/img/partners/homes-by-heffry-white.webp",
-      "alt": "Homes by Heffry",
-      "width": 516,
-      "height": 108
-    },
-    {
-      "src": "/assets/img/partners/project-black-white.webp",
-      "alt": "Project: Black",
-      "width": 602,
-      "height": 68
-    },
-    {
-      "src": "/assets/img/partners/oshom-white.webp",
-      "alt": "Oshom",
-      "width": 648,
-      "height": 508
-    },
-    {
-      "src": "/assets/img/partners/room4dessert-white.webp",
-      "alt": "Room4Dessert",
-      "width": 600,
-      "height": 506
-    },
-    {
-      "src": "/assets/img/partners/tacos-aqui-white.webp",
-      "alt": "Tacos Aqui",
-      "width": 340,
-      "height": 108
+      "src": "/assets/img/partners/heroes/luigis.png",
+      "alt": "Luigi's Hot Pizza",
+      "width": 349,
+      "height": 150
     },
     {
       "src": "/assets/img/partners/the-boogaloo-white.webp",
@@ -84,214 +60,22 @@
       "height": 244
     },
     {
-      "src": "/assets/img/partners/yuki-white.webp",
-      "alt": "YUKI",
-      "width": 2183,
-      "height": 666
-    },
-    {
-      "src": "/assets/img/partners/luigis-white.png",
-      "alt": "Luigi's",
-      "width": 693,
-      "height": 164
-    },
-    {
-      "src": "/assets/img/partners/better-hospitality-ink.webp",
-      "alt": "Better Hospitality",
-      "width": 560,
-      "height": 284
-    },
-    {
-      "src": "/assets/img/partners/hey-rcg-ink.webp",
-      "alt": "hey RCG",
-      "width": 1077,
-      "height": 378
-    },
-    {
-      "src": "/assets/img/partners/smoke-ink.svg",
-      "alt": "Smoke",
-      "width": 113,
-      "height": 34
-    },
-    {
-      "src": "/assets/img/partners/trim/69-slam.png",
-      "alt": "69 Slam",
-      "width": 324,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/arte.png",
-      "alt": "ARTE",
-      "width": 395,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/bali-food-and-travel.png",
-      "alt": "Bali Food & Travel",
-      "width": 497,
-      "height": 79
-    },
-    {
-      "src": "/assets/img/partners/trim/barefoot.png",
-      "alt": "Barefoot",
-      "width": 299,
-      "height": 98
-    },
-    {
-      "src": "/assets/img/partners/trim/body-factory-bali.png",
-      "alt": "Body Factory Bali",
-      "width": 111,
-      "height": 88
-    },
-    {
-      "src": "/assets/img/partners/trim/bodyworks-spa.png",
-      "alt": "Bodyworks Spa",
-      "width": 134,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/boy-n-cow.png",
-      "alt": "Boy N Cow",
-      "width": 263,
-      "height": 110
-    },
-    {
-      "src": "/assets/img/partners/trim/cs-dental.png",
-      "alt": "CS Dental",
-      "width": 210,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/faceday.png",
-      "alt": "FaceDay",
-      "width": 322,
-      "height": 90
-    },
-    {
-      "src": "/assets/img/partners/trim/hotel-indigo.png",
-      "alt": "Hotel Indigo",
-      "width": 178,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/indigo-kids.png",
-      "alt": "Indigo Kids",
-      "width": 273,
-      "height": 106
-    },
-    {
-      "src": "/assets/img/partners/trim/island-brewing.png",
-      "alt": "Island Brewing",
-      "width": 145,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/jiwa-yoga.png",
-      "alt": "Jiwa Yoga",
-      "width": 119,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/kilo-seminyak.png",
-      "alt": "Kilo Seminyak",
-      "width": 164,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/kura-kura.png",
-      "alt": "Kura Kura",
-      "width": 231,
-      "height": 99
-    },
-    {
-      "src": "/assets/img/partners/trim/kynd.png",
-      "alt": "KYND",
-      "width": 291,
-      "height": 100
-    },
-    {
-      "src": "/assets/img/partners/trim/le-pirate.png",
-      "alt": "Le Pirate",
-      "width": 367,
-      "height": 80
-    },
-    {
-      "src": "/assets/img/partners/trim/noema.png",
-      "alt": "Noema",
-      "width": 262,
-      "height": 83
-    },
-    {
-      "src": "/assets/img/partners/trim/palapa.png",
-      "alt": "Palapa",
-      "width": 202,
-      "height": 76
-    },
-    {
-      "src": "/assets/img/partners/trim/palm-four.png",
-      "alt": "Palm Four",
-      "width": 476,
-      "height": 62
-    },
-    {
-      "src": "/assets/img/partners/trim/potato-head.png",
-      "alt": "Potato Head",
-      "width": 546,
-      "height": 78
-    },
-    {
-      "src": "/assets/img/partners/trim/pound-4-pound-dojo.png",
+      "src": "/assets/img/partners/heroes/pound-4-pound-dojo.png",
       "alt": "Pound 4 Pound Dojo",
       "width": 779,
-      "height": 120
+      "height": 150
     },
     {
-      "src": "/assets/img/partners/trim/recovr.png",
-      "alt": "Recovr",
-      "width": 506,
-      "height": 120
+      "src": "/assets/img/partners/heroes/arte.png",
+      "alt": "ARTE",
+      "width": 494,
+      "height": 150
     },
     {
-      "src": "/assets/img/partners/trim/red-gunpowder.png",
-      "alt": "Red Gunpowder",
-      "width": 519,
-      "height": 76
-    },
-    {
-      "src": "/assets/img/partners/trim/sunset-beach.png",
-      "alt": "Sunset Beach",
-      "width": 107,
-      "height": 120
-    },
-    {
-      "src": "/assets/img/partners/trim/televisi-star.png",
-      "alt": "Televisi Star",
-      "width": 279,
-      "height": 104
-    },
-    {
-      "src": "/assets/img/partners/trim/the-dose-bali.png",
-      "alt": "The Dose Bali",
-      "width": 454,
-      "height": 64
-    },
-    {
-      "src": "/assets/img/partners/trim/uma-sapna.png",
-      "alt": "Uma Sapna",
-      "width": 356,
-      "height": 82
-    },
-    {
-      "src": "/assets/img/partners/trim/woods.png",
-      "alt": "Woods",
-      "width": 399,
-      "height": 107
-    },
-    {
-      "src": "/assets/img/partners/trim/zozo.png",
-      "alt": "ZOZO",
-      "width": 541,
-      "height": 120
+      "src": "/assets/img/partners/masonry.png",
+      "alt": "Masonry",
+      "width": 600,
+      "height": 70
     }
   ]
 }
