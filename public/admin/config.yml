@@ -430,7 +430,8 @@ collections:
           - { label: "Eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Lead", name: "lead", widget: "text" }
-          - label: "Champions"
+          - { label: "Top tier label", name: "championsLabel", widget: "string", required: false }
+          - label: "Top tier logos (Community Assist Partners)"
             name: "champions"
             widget: "list"
             fields:
@@ -439,6 +440,7 @@ collections:
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
               - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
+          - { label: "Game Changers label", name: "gameChangersLabel", widget: "string", required: false }
           - label: "Game Changers"
             name: "gameChangers"
             widget: "list"
@@ -448,6 +450,7 @@ collections:
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
               - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
+          - { label: "Community Heroes label", name: "communityHeroesLabel", widget: "string", required: false }
           - label: "Community Heroes (logos)"
             name: "communityHeroes"
             widget: "list"
@@ -457,7 +460,18 @@ collections:
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
               - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
-          - { label: "Community Heroes — 'more' line", name: "communityHeroesMore", widget: "string" }
+          - { label: "Community Heroes — 'more' line", name: "communityHeroesMore", widget: "string", required: false }
+          - { label: "Supporters label", name: "supportersLabel", widget: "string", required: false }
+          - label: "Supporters (logos)"
+            name: "supporters"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Logo", name: "src", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string" }
+              - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
+              - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
+              - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
           - { label: "CTA text", name: "ctaText", widget: "string" }
           - label: "CTA link"
             name: "ctaLink"
