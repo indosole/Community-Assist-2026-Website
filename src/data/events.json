@@ -12,10 +12,12 @@
       "name": "6th Annual 3x3 Charity Basketball",
       "date": "7 Nov 2026",
       "venue": "Canggu Community School",
-      "linkLabel": "Sign up here",
+      "linkLabel": "Register a team",
       "blurb": "Our flagship tournament, the event that started it all.",
-      "link2Href": "https://community-assist-courtside.vercel.app/live/ca-2026",
-      "link2Label": "Live scores & schedule"
+      "link3Href": "https://community-assist-courtside.vercel.app/live/ca-2026",
+      "link3Label": "Live scores & schedule",
+      "link2Href": "https://docs.google.com/forms/d/e/1FAIpQLSf9zpyIxDp_VbH_C6NuKjYs2yEpcyK7BbfBJve5vXAPOhhDXg/viewform",
+      "link2Label": "Register a youth team"
     },
     {
       "delay": "d2",
@@ -46,8 +48,8 @@
       "width": 900,
       "height": 635,
       "alt": "A long shared pizza on a table at a community gathering",
-      "name": "Merch Launch and Charity Bocce Ball Tournament ",
-      "date": "TBA ",
+      "name": "Merch Launch and Charity Bocce Ball Tournament",
+      "date": "TBA",
       "venue": "Luigi's",
       "linkLabel": "Sign up here",
       "blurb": "The 2027 merch drop and bocce."
