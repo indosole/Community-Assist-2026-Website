@@ -1,6 +1,15 @@
 ---
 import gift from '../data/gift.json';
 const { donut } = gift;
+// Build the donut segments from the legend counts (falls back to the CSS default when counts are missing).
+const total = donut.legend.reduce((n, l) => n + (Number(l.count) || 0), 0);
+let acc = 0;
+const donutStyle = total > 0
+  ? `background: conic-gradient(${donut.legend.map((l) => {
+      const from = (acc / total) * 100; acc += Number(l.count) || 0; const to = (acc / total) * 100;
+      return `${l.swatch} ${from.toFixed(1)}% ${to.toFixed(1)}%`;
+    }).join(', ')});`
+  : undefined;
 ---
 
 <!-- ============ 5 · What your gift does ============ -->
@@ -21,7 +30,7 @@ const { donut } = gift;
       </ul>
       <div class="gift-panel reveal d2">
         <div class="donut-wrap">
-          <div class="donut" role="img" aria-label={donut.ariaLabel}></div>
+          <div class="donut" role="img" aria-label={donut.ariaLabel} style={donutStyle}></div>
           <div class="donut-center"><span class="dc-num">{donut.centerNum}</span><span class="dc-label">{donut.centerLabel}</span></div>
         </div>
         <ul class="donut-legend">
