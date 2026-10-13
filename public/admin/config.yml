@@ -271,8 +271,9 @@ collections:
                 name: "legend"
                 widget: "list"
                 fields:
-                  - { label: "Swatch colour", name: "swatch", widget: "select", options: ["var(--blue)", "var(--orchid)", "var(--yellow)", "var(--pink)", "var(--green)"] }
+                  - { label: "Swatch colour", name: "swatch", widget: "select", options: ["var(--blue)", "var(--orchid)", "var(--yellow)", "var(--pink)", "var(--blue-deep)", "var(--green)"] }
                   - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Number of students (sets the donut slice)", name: "count", widget: "number", required: false, value_type: "int" }
 
       # 6 · 2026 goal
       - file: "src/data/goal.json"
