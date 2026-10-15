@@ -1,5 +1,5 @@
 {
-  "label": "With thanks to the partners who make it possible",
+  "label": "With thanks to our 2026 partners",
   "logos": [
     {
       "src": "/assets/img/partners/indosole-white.webp",
@@ -14,10 +14,28 @@
       "height": 151
     },
     {
-      "src": "/assets/img/partners/under-armour-white.webp",
-      "alt": "Under Armour",
-      "width": 436,
-      "height": 116
+      "src": "/assets/img/partners/project-black-white.webp",
+      "alt": "Project: Black",
+      "width": 602,
+      "height": 68
+    },
+    {
+      "src": "/assets/img/partners/trim/palm-four.png",
+      "alt": "Palm Four",
+      "width": 476,
+      "height": 62
+    },
+    {
+      "src": "/assets/img/partners/ragam-white.png",
+      "alt": "Ragam Foundation",
+      "width": 507,
+      "height": 157
+    },
+    {
+      "src": "/assets/img/partners/luigis-white.png",
+      "alt": "Luigi's Hot Pizza",
+      "width": 693,
+      "height": 164
     },
     {
       "src": "/assets/img/partners/nuanu-social-fund-white.webp",
@@ -26,70 +44,34 @@
       "height": 116
     },
     {
-      "src": "/assets/img/partners/homes-by-heffry-white.webp",
-      "alt": "Homes by Heffry",
-      "width": 516,
+      "src": "/assets/img/partners/jiwa-community-garden-white.png",
+      "alt": "Jiwa Community Garden",
+      "width": 330,
+      "height": 194
+    },
+    {
+      "src": "/assets/img/partners/tacos-aqui-white.png",
+      "alt": "Tacos Aqui",
+      "width": 340,
       "height": 108
     },
     {
-      "src": "/assets/img/partners/project-black-white.webp",
-      "alt": "Project: Black",
-      "width": 602,
-      "height": 68
+      "src": "/assets/img/partners/trim/pound-4-pound-dojo.png",
+      "alt": "Pound 4 Pound Dojo",
+      "width": 779,
+      "height": 120
     },
     {
-      "src": "/assets/img/partners/luigis-white.png",
-      "alt": "Luigi's",
-      "width": 693,
-      "height": 164
+      "src": "/assets/img/partners/room4dessert-white.png",
+      "alt": "Room4Dessert",
+      "width": 600,
+      "height": 506
     },
     {
       "src": "/assets/img/partners/the-boogaloo-white.webp",
       "alt": "The Boogaloo",
       "width": 628,
       "height": 244
-    },
-    {
-      "src": "/assets/img/partners/tacos-aqui-white.webp",
-      "alt": "Tacos Aqui",
-      "width": 340,
-      "height": 108
-    },
-    {
-      "src": "/assets/img/partners/yuki-white.webp",
-      "alt": "YUKI",
-      "width": 2183,
-      "height": 666
-    },
-    {
-      "src": "/assets/img/partners/oshom-white.webp",
-      "alt": "Oshom",
-      "width": 648,
-      "height": 508
-    },
-    {
-      "src": "/assets/img/partners/room4dessert-white.webp",
-      "alt": "Room4Dessert",
-      "width": 600,
-      "height": 506
-    },
-    {
-      "src": "/assets/img/partners/better-hospitality-ink.webp",
-      "alt": "Better Hospitality",
-      "width": 560,
-      "height": 284
-    },
-    {
-      "src": "/assets/img/partners/hey-rcg-ink.webp",
-      "alt": "hey RCG",
-      "width": 1077,
-      "height": 378
-    },
-    {
-      "src": "/assets/img/partners/smoke-ink.svg",
-      "alt": "Smoke",
-      "width": 113,
-      "height": 34
     }
   ]
 }

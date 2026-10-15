@@ -1,5 +1,11 @@
 ---
 import sponsors from '../data/sponsors.json';
+const tiers = [
+  { key: 'champions', cls: 'champions', label: sponsors.championsLabel || 'Community Assist Partners', logos: sponsors.champions || [] },
+  { key: 'gameChangers', cls: 'changers', label: sponsors.gameChangersLabel || 'Game Changers', logos: sponsors.gameChangers || [] },
+  { key: 'communityHeroes', cls: 'heroes', label: sponsors.communityHeroesLabel || 'Community Heroes', logos: sponsors.communityHeroes || [], more: sponsors.communityHeroesMore },
+  { key: 'supporters', cls: 'heroes', label: sponsors.supportersLabel || 'Supporters', logos: sponsors.supporters || [] },
+].filter((t) => t.logos.length > 0);
 ---
 
 <!-- ============ 9 · Sponsors ============ -->
@@ -11,33 +17,17 @@ import sponsors from '../data/sponsors.json';
       <p class="lead muted" style="margin-top:14px">{sponsors.lead}</p>
     </div>
 
-    <div class="sponsor-tier reveal">
-      <p class="st-label">Champions</p>
-      <div class="logo-row champions">
-        {sponsors.champions.map((s) => (
-          <img class={`slogo${s.mono ? ' slogo--mono' : ''}`} src={s.src} width={s.width} height={s.height} alt={s.alt} loading="lazy" />
-        ))}
+    {tiers.map((t) => (
+      <div class="sponsor-tier reveal">
+        <p class="st-label">{t.label}</p>
+        <div class={`logo-row ${t.cls}`}>
+          {t.logos.map((s) => (
+            <img class={`slogo${s.mono ? ' slogo--mono' : ''}`} src={s.src} width={s.width} height={s.height} alt={s.alt} loading="lazy" />
+          ))}
+        </div>
+        {t.more && <p class="hero-more">{t.more}</p>}
       </div>
-    </div>
-
-    <div class="sponsor-tier reveal">
-      <p class="st-label">Game Changers</p>
-      <div class="logo-row changers">
-        {sponsors.gameChangers.map((s) => (
-          <img class={`slogo${s.mono ? ' slogo--mono' : ''}`} src={s.src} width={s.width} height={s.height} alt={s.alt} loading="lazy" />
-        ))}
-      </div>
-    </div>
-
-    <div class="sponsor-tier reveal">
-      <p class="st-label">Community Heroes</p>
-      <div class="logo-row heroes">
-        {sponsors.communityHeroes.map((s) => (
-          <img class={`slogo${s.mono ? ' slogo--mono' : ''}`} src={s.src} width={s.width} height={s.height} alt={s.alt} loading="lazy" />
-        ))}
-      </div>
-      <p class="hero-more">{sponsors.communityHeroesMore}</p>
-    </div>
+    ))}
 
     <p class="sponsor-cta reveal">{sponsors.ctaText} <a href={sponsors.ctaLink.href}>{sponsors.ctaLink.label}</a></p>
   </div>

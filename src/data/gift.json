@@ -2,19 +2,79 @@
   "eyebrow": "Where your money goes",
   "headingHtml": "<span class=\"mark-yellow\">Rp 6 million</span> sends one child to school for a whole year.",
   "benefits": [
-    { "icon": "i-cap", "tile": "t-pink", "title": "Quality education", "text": "A full year of tuition for one student.", "delay": "" },
-    { "icon": "i-book", "tile": "t-blue", "title": "Learning materials", "text": "The essentials: books, pens, and a backpack.", "delay": "d1" },
-    { "icon": "i-shirt", "tile": "t-yellow", "title": "School uniform", "text": "A complete uniform so they fit in and show up.", "delay": "d2" },
-    { "icon": "i-mentor", "tile": "t-pink", "title": "A dedicated mentor", "text": "A community manager guiding each child's progress.", "delay": "d3" }
+    {
+      "icon": "i-cap",
+      "tile": "t-pink",
+      "title": "School fees",
+      "text": "A full year of tuition, from middle school to university.",
+      "delay": ""
+    },
+    {
+      "icon": "i-shirt",
+      "tile": "t-blue",
+      "title": "Uniform & supplies",
+      "text": "Books, uniform and the essentials to show up ready.",
+      "delay": "d1"
+    },
+    {
+      "icon": "i-book",
+      "tile": "t-yellow",
+      "title": "English classes",
+      "text": "Small groups, every week, around school hours.",
+      "delay": "d2"
+    },
+    {
+      "icon": "i-mentor",
+      "tile": "t-pink",
+      "title": "A dedicated mentor",
+      "text": "A community manager guiding each child's progress.",
+      "delay": "d3"
+    },
+    {
+      "icon": "i-star",
+      "tile": "t-blue",
+      "title": "Trips & workshops",
+      "text": "Hands-on learning at farms, makers and sustainability projects.",
+      "delay": ""
+    },
+    {
+      "icon": "i-heart",
+      "tile": "t-yellow",
+      "title": "Family support",
+      "text": "Help for families when everyday needs get in the way of school.",
+      "delay": "d1"
+    }
   ],
   "donut": {
-    "centerNum": "30",
-    "centerLabel": "students",
-    "ariaLabel": "Scholarship mix: 18 middle-school, 8 high-school, 4 university students",
+    "centerNum": "50",
+    "centerLabel": "students · 2026/27 goal",
+    "ariaLabel": "Scholarship goal for 2026/27: 15 high-school, 14 middle-school, 12 vocational high-school, 7 junior high and 2 university students",
     "legend": [
-      { "swatch": "var(--blue)", "label": "18 middle-school" },
-      { "swatch": "var(--orchid)", "label": "8 high-school" },
-      { "swatch": "var(--yellow)", "label": "4 university" }
+      {
+        "swatch": "var(--blue)",
+        "label": "15 high-school (SMA)",
+        "count": 15
+      },
+      {
+        "swatch": "var(--orchid)",
+        "label": "14 middle-school (SMP)",
+        "count": 14
+      },
+      {
+        "swatch": "var(--yellow)",
+        "label": "12 vocational (SMK)",
+        "count": 12
+      },
+      {
+        "swatch": "var(--pink)",
+        "label": "7 junior high",
+        "count": 7
+      },
+      {
+        "swatch": "var(--blue-deep)",
+        "label": "2 university",
+        "count": 2
+      }
     ]
   }
 }

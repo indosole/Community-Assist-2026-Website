@@ -1,25 +1,19 @@
 {
   "eyebrow": "Our Community",
-  "heading": "Powered by 200+ Bali businesses.",
-  "lead": "Every partnership is remembered. We make sure our community knows who makes this possible.",
+  "heading": "Our 2026 partners.",
+  "lead": "Thank you to the businesses backing Community Assist this year. Every partnership is remembered.",
   "champions": [
     {
-      "src": "/assets/img/partners/homes-by-heffry-white.webp",
-      "alt": "Homes by Heffry",
-      "width": 516,
-      "height": 108
+      "src": "/assets/img/partners/indosole-white.webp",
+      "alt": "Indosole",
+      "width": 513,
+      "height": 158
     },
     {
-      "src": "/assets/img/partners/under-armour-white.webp",
-      "alt": "Under Armour",
-      "width": 436,
-      "height": 116
-    },
-    {
-      "src": "/assets/img/partners/nuanu-social-fund-white.webp",
-      "alt": "Nuanu Social Fund",
-      "width": 673,
-      "height": 116
+      "src": "/assets/img/partners/pnny-white.webp",
+      "alt": "PNNY",
+      "width": 340,
+      "height": 151
     },
     {
       "src": "/assets/img/partners/project-black-white.webp",
@@ -30,31 +24,62 @@
   ],
   "gameChangers": [
     {
-      "src": "/assets/img/partners/oshom-white.webp",
-      "alt": "Oshom",
-      "width": 648,
-      "height": 508
+      "src": "/assets/img/partners/trim/palm-four.png",
+      "alt": "Palm Four",
+      "width": 476,
+      "height": 62
     },
     {
-      "src": "/assets/img/partners/yuki-white.webp",
-      "alt": "YUKI",
-      "width": 2183,
-      "height": 666
+      "src": "/assets/img/partners/ragam-white.png",
+      "alt": "Ragam Foundation",
+      "width": 507,
+      "height": 157
     },
     {
-      "src": "/assets/img/partners/swich-cut.png",
-      "alt": "Swich",
-      "width": 320,
-      "height": 320
+      "src": "/assets/img/partners/luigis-white.png",
+      "alt": "Luigi's Hot Pizza",
+      "width": 693,
+      "height": 164
     },
     {
-      "src": "/assets/img/partners/tacos-aqui-white.webp",
+      "src": "/assets/img/partners/nuanu-social-fund-white.webp",
+      "alt": "Nuanu Social Fund",
+      "width": 673,
+      "height": 116
+    }
+  ],
+  "communityHeroes": [],
+  "communityHeroesMore": "",
+  "ctaText": "Want your logo here?",
+  "ctaLink": {
+    "label": "Become a partner →",
+    "href": "#give"
+  },
+  "championsLabel": "Community Assist Partners",
+  "gameChangersLabel": "Partners",
+  "communityHeroesLabel": "Community Heroes",
+  "supportersLabel": "Supporters",
+  "supporters": [
+    {
+      "src": "/assets/img/partners/jiwa-community-garden-white.png",
+      "alt": "Jiwa Community Garden",
+      "width": 330,
+      "height": 194
+    },
+    {
+      "src": "/assets/img/partners/tacos-aqui-white.png",
       "alt": "Tacos Aqui",
       "width": 340,
       "height": 108
     },
     {
-      "src": "/assets/img/partners/room4dessert-white.webp",
+      "src": "/assets/img/partners/trim/pound-4-pound-dojo.png",
+      "alt": "Pound 4 Pound Dojo",
+      "width": 779,
+      "height": 120
+    },
+    {
+      "src": "/assets/img/partners/room4dessert-white.png",
       "alt": "Room4Dessert",
       "width": 600,
       "height": 506
@@ -64,237 +89,6 @@
       "alt": "The Boogaloo",
       "width": 628,
       "height": 244
-    },
-    {
-      "src": "/assets/img/partners/hey-rcg-ink.webp",
-      "alt": "hey RCG",
-      "width": 1077,
-      "height": 378
-    },
-    {
-      "src": "/assets/img/partners/mason-adventures.png",
-      "alt": "Mason Adventures Bali",
-      "width": 512,
-      "height": 465,
-      "mono": true
-    },
-    {
-      "src": "/assets/img/partners/better-hospitality-ink.webp",
-      "alt": "Better Hospitality Reviews",
-      "width": 560,
-      "height": 284
-    },
-    {
-      "src": "/assets/img/partners/smoke-ink.svg",
-      "alt": "Smoke",
-      "width": 113,
-      "height": 34
     }
-  ],
-  "communityHeroes": [
-    {
-      "src": "/assets/img/partners/heroes/arte.png",
-      "alt": "ARTE",
-      "width": 494,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/noema.png",
-      "alt": "Noema",
-      "width": 262,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/cs-dental.png",
-      "alt": "CS Dental",
-      "width": 226,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/kilo-seminyak.png",
-      "alt": "Kilo Seminyak",
-      "width": 199,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/le-pirate.png",
-      "alt": "Le Pirate",
-      "width": 367,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/luigis.png",
-      "alt": "Luigi's Hot Pizza",
-      "width": 349,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/kynd.png",
-      "alt": "KYND",
-      "width": 291,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/kura-kura.png",
-      "alt": "Kura Kura",
-      "width": 231,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/palapa.png",
-      "alt": "Palapa",
-      "width": 202,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/pound-4-pound-dojo.png",
-      "alt": "Pound 4 Pound Dojo",
-      "width": 779,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/red-gunpowder.png",
-      "alt": "Red Gunpowder",
-      "width": 519,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/bramble-living.png",
-      "alt": "Bramble Living",
-      "width": 365,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/woods.png",
-      "alt": "Woods",
-      "width": 399,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/zozo.png",
-      "alt": "ZOZO",
-      "width": 568,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/uma-sapna.png",
-      "alt": "Uma Sapna",
-      "width": 356,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/sunset-beach.png",
-      "alt": "Sunset Beach",
-      "width": 134,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/jiwa-yoga.png",
-      "alt": "Jiwa Yoga",
-      "width": 147,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/body-factory-bali.png",
-      "alt": "Body Factory Bali",
-      "width": 111,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/bali-food-and-travel.png",
-      "alt": "Bali Food & Travel",
-      "width": 497,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/potato-head.png",
-      "alt": "Potato Head",
-      "width": 546,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/bodyworks-spa.png",
-      "alt": "Bodyworks Spa",
-      "width": 168,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/boy-n-cow.png",
-      "alt": "Boy N Cow",
-      "width": 263,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/recovr.png",
-      "alt": "Recovr",
-      "width": 632,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/palm-four.png",
-      "alt": "Palm Four",
-      "width": 476,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/island-brewing.png",
-      "alt": "Island Brewing",
-      "width": 181,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/televisi-star.png",
-      "alt": "Televisi Star",
-      "width": 279,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/barefoot.png",
-      "alt": "Barefoot",
-      "width": 299,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/69-slam.png",
-      "alt": "69 Slam",
-      "width": 405,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/faceday.png",
-      "alt": "FaceDay",
-      "width": 322,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/waterbom-bali.png",
-      "alt": "Waterbom Bali",
-      "width": 167,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/hotel-indigo.png",
-      "alt": "Hotel Indigo",
-      "width": 208,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/indigo-kids.png",
-      "alt": "Indigo Kids",
-      "width": 273,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/the-dose-bali.png",
-      "alt": "The Dose Bali",
-      "width": 454,
-      "height": 150
-    }
-  ],
-  "communityHeroesMore": "+ 150 more local businesses",
-  "ctaText": "Want your logo here?",
-  "ctaLink": {
-    "label": "Become a partner →",
-    "href": "#give"
-  }
+  ]
 }

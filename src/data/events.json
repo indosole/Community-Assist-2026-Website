@@ -1,6 +1,6 @@
 {
   "eyebrow": "2026 Events",
-  "heading": "The events.",
+  "heading": "Four events, one year.",
   "cards": [
     {
       "delay": "d1",
@@ -9,11 +9,15 @@
       "width": 800,
       "height": 467,
       "alt": "Players in a 3-on-3 basketball game",
-      "name": "3x3 Charity Basketball",
+      "name": "6th Annual 3x3 Charity Basketball",
       "date": "7 Nov 2026",
-      "venue": "Our flagship tournament",
-      "linkLabel": "Sign up here",
-      "blurb": "Five years running. The event that started it all."
+      "venue": "Canggu Community School",
+      "linkLabel": "Register a team",
+      "blurb": "Our flagship tournament, the event that started it all.",
+      "link3Href": "https://community-assist-courtside.vercel.app/live/ca-2026",
+      "link3Label": "Live scores & schedule",
+      "link2Href": "https://docs.google.com/forms/d/e/1FAIpQLSf9zpyIxDp_VbH_C6NuKjYs2yEpcyK7BbfBJve5vXAPOhhDXg/viewform",
+      "link2Label": "Register a youth team"
     },
     {
       "delay": "d2",
@@ -21,10 +25,10 @@
       "width": 800,
       "height": 529,
       "alt": "A mirror ball held up to the light at an evening event",
-      "name": "Auction Night",
-      "date": "Dec 2026",
-      "venue": "Year-end celebration",
-      "blurb": "20 exclusive lots, music and dinner to close out the year."
+      "name": "Year-End Celebration",
+      "date": "Dec 2026 / Jan 2027",
+      "venue": "Auction dinner · venue TBA",
+      "blurb": "Auction, music and dinner to close out the year."
     },
     {
       "delay": "d3",
@@ -33,9 +37,9 @@
       "height": 600,
       "alt": "People playing beach games on the sand in Bali",
       "name": "Beach Games",
-      "date": "TBA",
+      "date": "Spring 2027",
       "venue": "Times Beach Warung",
-      "blurb": "Dodgeball, a sandcastle contest and a community market by the shore."
+      "blurb": "Dodgeball, sandcastles and a community market by the shore."
     },
     {
       "delay": "",
@@ -44,8 +48,8 @@
       "width": 900,
       "height": 635,
       "alt": "A long shared pizza on a table at a community gathering",
-      "name": "Merch Launch and Charity Bocce Ball Tournament ",
-      "date": "TBA ",
+      "name": "Merch Launch and Charity Bocce Ball Tournament",
+      "date": "TBA",
       "venue": "Luigi's",
       "linkLabel": "Sign up here",
       "blurb": "The 2027 merch drop and bocce."
@@ -78,7 +82,7 @@
       {
         "title": "Book a stall",
         "text": "Sell at the community market.",
-        "mailto": "mailto:communityassist@indosole.com?subject=Book%20a%20community-market%20stall"
+        "mailto": "https://docs.google.com/forms/d/e/1FAIpQLSfJwKvDtOdLeHf6F2TcRJjMSqcX9oeJFI2pWPpjO3ymLInm8w/viewform"
       }
     ],
     "cta": {

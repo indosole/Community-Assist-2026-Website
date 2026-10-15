@@ -27,6 +27,20 @@ const hasMore = initialVisible != null && pastEvents.photos.length > initialVisi
                 {...(/^https?:\/\//i.test(c.linkHref) ? { target: '_blank', rel: 'noopener' } : {})}
               >{c.linkLabel || 'Find out more'} <span aria-hidden="true">&rarr;</span></a>
             )}
+            {c.link2Href && (
+              <a
+                class="event-link"
+                href={c.link2Href}
+                {...(/^https?:\/\//i.test(c.link2Href) ? { target: '_blank', rel: 'noopener' } : {})}
+              >{c.link2Label || 'Find out more'} <span aria-hidden="true">&rarr;</span></a>
+            )}
+            {c.link3Href && (
+              <a
+                class="event-link"
+                href={c.link3Href}
+                {...(/^https?:\/\//i.test(c.link3Href) ? { target: '_blank', rel: 'noopener' } : {})}
+              >{c.link3Label || 'Find out more'} <span aria-hidden="true">&rarr;</span></a>
+            )}
           </div>
         </article>
       ))}
@@ -37,7 +51,7 @@ const hasMore = initialVisible != null && pastEvents.photos.length > initialVisi
       <p class="bp-sub">{bePart.sub}</p>
       <div class="bepart-grid">
         {bePart.items.map((it) => (
-          <a class="bp-item" href={it.mailto}><div class="bp-num"></div><h4>{it.title}</h4><p>{it.text}</p></a>
+          <a class="bp-item" href={it.mailto} {...(it.mailto?.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}><div class="bp-num"></div><h4>{it.title}</h4><p>{it.text}</p></a>
         ))}
       </div>
       {bePart.cta && bePart.cta.href && (

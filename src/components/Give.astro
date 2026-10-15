@@ -13,33 +13,13 @@ const { individuals, businesses } = give;
 
     <div class="tab-center reveal">
       <div class="tabs" role="tablist" aria-label="Ways to give">
-        <button class="tab tab-ind" role="tab" id="tab-ind" aria-selected="true" aria-controls="panel-ind">For individuals</button>
-        <button class="tab tab-biz" role="tab" id="tab-biz" aria-selected="false" aria-controls="panel-biz" tabindex="-1">For businesses</button>
-      </div>
-    </div>
-
-    <!-- Individuals -->
-    <div class="tabpanel active" id="panel-ind" role="tabpanel" aria-labelledby="tab-ind">
-      <div class="give-ind">
-        <div class="give-intro">
-          <h3 class="h3" set:html={individuals.headingHtml} />
-          <p class="lead" style="margin-top:14px">{individuals.lead}</p>
-          <a href={individuals.cta.href} class="btn btn--primary btn--lg">{individuals.cta.label}</a>
-        </div>
-        <ul class="ladder">
-          {individuals.ladder.map((r, i) => (
-            r.highlight ? (
-              <li class="rung highlight"><span class="r-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg> {r.badge}</span><span class="r-amt">{r.amt}</span><span class="r-val">{r.val}</span></li>
-            ) : (
-              <li class={`rung r${i + 1}`}><span class="r-amt">{r.amt}</span><span class="r-val">{r.val}</span></li>
-            )
-          ))}
-        </ul>
+        <button class="tab tab-biz" role="tab" id="tab-biz" aria-selected="true" aria-controls="panel-biz">For businesses</button>
+        <button class="tab tab-ind" role="tab" id="tab-ind" aria-selected="false" aria-controls="panel-ind" tabindex="-1">For individuals</button>
       </div>
     </div>
 
     <!-- Businesses -->
-    <div class="tabpanel" id="panel-biz" role="tabpanel" aria-labelledby="tab-biz" hidden>
+    <div class="tabpanel active" id="panel-biz" role="tabpanel" aria-labelledby="tab-biz">
       <div class="tiers">
         {businesses.tiers.map((t) => (
           <article class={`tier${t.featured ? ' featured' : ''}`}>
@@ -56,7 +36,37 @@ const { individuals, businesses } = give;
           </article>
         ))}
       </div>
+      {businesses.extras && businesses.extras.length > 0 && (
+        <div class="extras">
+          <h3 class="h3 extras-h">{businesses.extrasHeading}</h3>
+          <ul class="extras-grid">
+            {businesses.extras.map((x) => (
+              <li class="extra"><span class="x-price">{x.price}</span><h4>{x.title}</h4><p>{x.text}</p></li>
+            ))}
+          </ul>
+        </div>
+      )}
       <p class="give-biz-cta muted" set:html={businesses.partnerNoteHtml} />
+    </div>
+
+    <!-- Individuals -->
+    <div class="tabpanel" id="panel-ind" role="tabpanel" aria-labelledby="tab-ind" hidden>
+      <div class="give-ind">
+        <div class="give-intro">
+          <h3 class="h3" set:html={individuals.headingHtml} />
+          <p class="lead" style="margin-top:14px">{individuals.lead}</p>
+          <a href={individuals.cta.href} class="btn btn--primary btn--lg">{individuals.cta.label}</a>
+        </div>
+        <ul class="ladder">
+          {individuals.ladder.map((r, i) => (
+            r.highlight ? (
+              <li class="rung highlight"><span class="r-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg> {r.badge}</span><span class="r-amt">{r.amt}</span><span class="r-val">{r.val}</span></li>
+            ) : (
+              <li class={`rung r${i + 1}`}><span class="r-amt">{r.amt}</span><span class="r-val">{r.val}</span></li>
+            )
+          ))}
+        </ul>
+      </div>
     </div>
   </div>
 </section>

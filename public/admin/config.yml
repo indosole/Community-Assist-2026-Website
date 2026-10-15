@@ -271,8 +271,9 @@ collections:
                 name: "legend"
                 widget: "list"
                 fields:
-                  - { label: "Swatch colour", name: "swatch", widget: "select", options: ["var(--blue)", "var(--orchid)", "var(--yellow)", "var(--pink)", "var(--green)"] }
+                  - { label: "Swatch colour", name: "swatch", widget: "select", options: ["var(--blue)", "var(--orchid)", "var(--yellow)", "var(--pink)", "var(--blue-deep)", "var(--green)"] }
                   - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Number of students (sets the donut slice)", name: "count", widget: "number", required: false, value_type: "int" }
 
       # 6 · 2026 goal
       - file: "src/data/goal.json"
@@ -351,6 +352,15 @@ collections:
                   - { label: "Email link (mailto)", name: "mailto", widget: "string" }
                   - { label: "Button label", name: "ctaLabel", widget: "string" }
               - { label: "Partner note", name: "partnerNoteHtml", widget: "text", hint: "HTML allowed" }
+              - { label: "Additional opportunities heading", name: "extrasHeading", widget: "string", required: false }
+              - label: "Additional opportunities"
+                name: "extras"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Price", name: "price", widget: "string" }
 
       # 8 · Events
       - file: "src/data/events.json"
@@ -369,6 +379,10 @@ collections:
               - { label: "Blurb", name: "blurb", widget: "text" }
               - { label: "Link URL (optional)", name: "linkHref", widget: "string", required: false, hint: "Leave blank for no link. Paste a full URL (https://...) or a mailto: address. It appears as a link under the blurb." }
               - { label: "Link text (optional)", name: "linkLabel", widget: "string", required: false, hint: "Wording of the link, e.g. 'Get tickets'. Defaults to 'Find out more'." }
+              - { label: "Second link URL (optional)", name: "link2Href", widget: "string", required: false, hint: "Optional extra link, e.g. live scores. Leave blank for none." }
+              - { label: "Second link text (optional)", name: "link2Label", widget: "string", required: false }
+              - { label: "Third link URL (optional)", name: "link3Href", widget: "string", required: false }
+              - { label: "Third link text (optional)", name: "link3Label", widget: "string", required: false }
               - { label: "Image", name: "img", widget: "image" }
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
@@ -419,7 +433,8 @@ collections:
           - { label: "Eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Lead", name: "lead", widget: "text" }
-          - label: "Champions"
+          - { label: "Top tier label", name: "championsLabel", widget: "string", required: false }
+          - label: "Top tier logos (Community Assist Partners)"
             name: "champions"
             widget: "list"
             fields:
@@ -428,6 +443,7 @@ collections:
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
               - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
+          - { label: "Game Changers label", name: "gameChangersLabel", widget: "string", required: false }
           - label: "Game Changers"
             name: "gameChangers"
             widget: "list"
@@ -437,6 +453,7 @@ collections:
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
               - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
+          - { label: "Community Heroes label", name: "communityHeroesLabel", widget: "string", required: false }
           - label: "Community Heroes (logos)"
             name: "communityHeroes"
             widget: "list"
@@ -446,7 +463,18 @@ collections:
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
               - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
-          - { label: "Community Heroes — 'more' line", name: "communityHeroesMore", widget: "string" }
+          - { label: "Community Heroes — 'more' line", name: "communityHeroesMore", widget: "string", required: false }
+          - { label: "Supporters label", name: "supportersLabel", widget: "string", required: false }
+          - label: "Supporters (logos)"
+            name: "supporters"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Logo", name: "src", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string" }
+              - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
+              - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
+              - { label: "Grayscale (for crest logos that don't work as solid black)", name: "mono", widget: "boolean", default: false, required: false }
           - { label: "CTA text", name: "ctaText", widget: "string" }
           - label: "CTA link"
             name: "ctaLink"
