@@ -42,40 +42,58 @@
       "height": 68
     },
     {
+      "src": "/assets/img/partners/trim/palm-four.png",
+      "alt": "Palm Four",
+      "width": 476,
+      "height": 62
+    },
+    {
+      "src": "/assets/img/partners/ragam-white.png",
+      "alt": "Ragam Foundation",
+      "width": 507,
+      "height": 157
+    },
+    {
+      "src": "/assets/img/partners/luigis-white.png",
+      "alt": "Luigi's Hot Pizza",
+      "width": 693,
+      "height": 164
+    },
+    {
       "src": "/assets/img/partners/nuanu-social-fund-white.webp",
       "alt": "Nuanu Social Fund",
       "width": 673,
       "height": 116
     },
     {
-      "src": "/assets/img/partners/heroes/luigis.png",
-      "alt": "Luigi's Hot Pizza",
-      "width": 349,
-      "height": 150
+      "src": "/assets/img/partners/jiwa-community-garden-white.png",
+      "alt": "Jiwa Community Garden",
+      "width": 330,
+      "height": 194
+    },
+    {
+      "src": "/assets/img/partners/tacos-aqui-white.png",
+      "alt": "Tacos Aqui",
+      "width": 340,
+      "height": 108
+    },
+    {
+      "src": "/assets/img/partners/trim/pound-4-pound-dojo.png",
+      "alt": "Pound 4 Pound Dojo",
+      "width": 779,
+      "height": 120
+    },
+    {
+      "src": "/assets/img/partners/room4dessert-white.png",
+      "alt": "Room4Dessert",
+      "width": 600,
+      "height": 506
     },
     {
       "src": "/assets/img/partners/the-boogaloo-white.webp",
       "alt": "The Boogaloo",
       "width": 628,
       "height": 244
-    },
-    {
-      "src": "/assets/img/partners/heroes/pound-4-pound-dojo.png",
-      "alt": "Pound 4 Pound Dojo",
-      "width": 779,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/heroes/arte.png",
-      "alt": "ARTE",
-      "width": 494,
-      "height": 150
-    },
-    {
-      "src": "/assets/img/partners/masonry.png",
-      "alt": "Masonry",
-      "width": 600,
-      "height": 70
     }
   ]
 }
