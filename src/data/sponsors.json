@@ -20,6 +20,12 @@
       "alt": "Project: Black",
       "width": 602,
       "height": 68
+    },
+    {
+      "src": "/assets/img/partners/nuanu-social-fund-white.webp",
+      "alt": "Nuanu Social Fund",
+      "width": 673,
+      "height": 116
     }
   ],
   "gameChangers": [
@@ -40,12 +46,6 @@
       "alt": "Luigi's Hot Pizza",
       "width": 693,
       "height": 164
-    },
-    {
-      "src": "/assets/img/partners/nuanu-social-fund-white.webp",
-      "alt": "Nuanu Social Fund",
-      "width": 673,
-      "height": 116
     }
   ],
   "communityHeroes": [],
@@ -89,6 +89,12 @@
       "alt": "The Boogaloo",
       "width": 628,
       "height": 244
+    },
+    {
+      "src": "/assets/img/partners/trim/arte.png",
+      "alt": "ARTE",
+      "width": 395,
+      "height": 120
     }
   ]
 }
