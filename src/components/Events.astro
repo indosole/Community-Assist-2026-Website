@@ -41,6 +41,12 @@ const hasMore = initialVisible != null && pastEvents.photos.length > initialVisi
                 {...(/^https?:\/\//i.test(c.link3Href) ? { target: '_blank', rel: 'noopener' } : {})}
               >{c.link3Label || 'Find out more'} <span aria-hidden="true">&rarr;</span></a>
             )}
+            {c.qrImg && (
+              <a class="event-qr" href={c.qrHref || c.link3Href || c.linkHref} target="_blank" rel="noopener">
+                <img src={c.qrImg} width="88" height="88" alt={`QR code: ${c.qrLabel || 'scan to open'}`} loading="lazy" />
+                <span>{c.qrLabel || 'Scan with your phone'}</span>
+              </a>
+            )}
           </div>
         </article>
       ))}
@@ -79,3 +85,12 @@ const hasMore = initialVisible != null && pastEvents.photos.length > initialVisi
     </div>
   </div>
 </section>
+
+<style>
+  /* QR on an event card: handy on desktop/tablet (scan with your phone). Hidden on phones, where the link above does the job. */
+  .event-qr { display: flex; align-items: center; gap: 12px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--hairline); text-decoration: none; color: var(--grey); font-size: .8rem; line-height: 1.35; }
+  .event-qr img { width: 88px; height: 88px; flex: none; border-radius: 6px; image-rendering: pixelated; }
+  .event-qr span { max-width: 16ch; }
+  .event-qr:hover span { color: var(--blue); }
+  @media (max-width: 700px) { .event-qr { display: none; } }
+</style>
