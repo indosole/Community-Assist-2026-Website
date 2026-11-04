@@ -8,6 +8,18 @@
       "height": 158
     },
     {
+      "src": "/assets/img/partners/pnny-white.webp",
+      "alt": "PNNY",
+      "width": 340,
+      "height": 151
+    },
+    {
+      "src": "/assets/img/partners/ragam-white.png",
+      "alt": "Ragam",
+      "width": 507,
+      "height": 157
+    },
+    {
       "src": "/assets/img/partners/project-black-white.webp",
       "alt": "Project: Black",
       "width": 602,
@@ -26,22 +38,28 @@
       "height": 240
     },
     {
+      "src": "/assets/img/partners/2026/canggu-community-school.png",
+      "alt": "Canggu Community School",
+      "width": 120,
+      "height": 120
+    },
+    {
+      "src": "/assets/img/partners/trim/palm-four.png",
+      "alt": "Palm Four",
+      "width": 476,
+      "height": 62
+    },
+    {
       "src": "/assets/img/partners/room4dessert-white.png",
       "alt": "Room4Dessert",
       "width": 600,
       "height": 506
     },
     {
-      "src": "/assets/img/partners/the-block.png",
-      "alt": "The Block",
-      "width": 434,
-      "height": 42
-    },
-    {
-      "src": "/assets/img/partners/miyo.png",
-      "alt": "Miyo",
-      "width": 498,
-      "height": 215
+      "src": "/assets/img/partners/2026/casa-las-tortugas.png",
+      "alt": "Casa Las Tortugas",
+      "width": 480,
+      "height": 106
     },
     {
       "src": "/assets/img/partners/luigis-white.png",
@@ -50,10 +68,16 @@
       "height": 164
     },
     {
-      "src": "/assets/img/partners/the-boogaloo-white.webp",
-      "alt": "The Boogaloo",
-      "width": 628,
-      "height": 244
+      "src": "/assets/img/partners/jiwa-community-garden-white.png",
+      "alt": "Jiwa Community Garden",
+      "width": 330,
+      "height": 194
+    },
+    {
+      "src": "/assets/img/partners/the-block.png",
+      "alt": "The Block",
+      "width": 434,
+      "height": 42
     },
     {
       "src": "/assets/img/partners/trim/pound-4-pound-dojo.png",
@@ -62,16 +86,16 @@
       "height": 120
     },
     {
-      "src": "/assets/img/partners/trim/woods.png",
-      "alt": "The Woods",
-      "width": 399,
-      "height": 107
+      "src": "/assets/img/partners/the-boogaloo-white.webp",
+      "alt": "The Boogaloo",
+      "width": 628,
+      "height": 244
     },
     {
-      "src": "/assets/img/partners/trim/arte.png",
-      "alt": "ARTE",
-      "width": 395,
-      "height": 120
+      "src": "/assets/img/partners/miyo.png",
+      "alt": "Miyo",
+      "width": 498,
+      "height": 215
     }
   ]
 }
