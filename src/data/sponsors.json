@@ -104,8 +104,10 @@
       "height": 215
     },
     {
-      "src": "",
-      "alt": "Gordon N. Ball Inc."
+      "src": "/assets/img/partners/2026/gordon-n-ball.png",
+      "alt": "Gordon N. Ball Inc.",
+      "width": 217,
+      "height": 120
     }
   ],
   "communityHeroesMore": "",
@@ -388,18 +390,6 @@
       "height": 120
     },
     {
-      "src": "/assets/img/partners/2026/acme.png",
-      "alt": "ACME",
-      "width": 133,
-      "height": 36
-    },
-    {
-      "src": "/assets/img/partners/2026/the-hula.png",
-      "alt": "The Hula",
-      "width": 480,
-      "height": 88
-    },
-    {
       "src": "/assets/img/partners/2026/black-sand-brewery.png",
       "alt": "Black Sand Brewery",
       "width": 480,
@@ -422,6 +412,12 @@
       "alt": "Bali Beach Glamping",
       "width": 212,
       "height": 120
+    },
+    {
+      "src": "/assets/img/partners/2026/analog.png",
+      "alt": "Analog",
+      "width": 480,
+      "height": 114
     }
   ]
 }
