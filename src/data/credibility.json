@@ -24,6 +24,12 @@
   "partnersLabel": "In partnership with",
   "partnerLogos": [
     {
+      "src": "/assets/img/partners/indosole-white.webp",
+      "alt": "Indosole",
+      "width": 513,
+      "height": 158
+    },
+    {
       "src": "/assets/img/partners/nuanu-social-fund-white.webp",
       "alt": "Nuanu Social Fund",
       "width": 673,

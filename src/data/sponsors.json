@@ -232,10 +232,6 @@
       "height": 120
     },
     {
-      "src": "",
-      "alt": "Paintball Bali Canggu"
-    },
-    {
       "src": "/assets/img/partners/2026/fuego.png",
       "alt": "Fuego",
       "width": 202,
@@ -374,10 +370,6 @@
       "height": 120
     },
     {
-      "src": "",
-      "alt": "Bisma Eight"
-    },
-    {
       "src": "/assets/img/partners/2026/ettore-gelato.png",
       "alt": "Ettore Gelato",
       "width": 291,
@@ -418,6 +410,16 @@
       "alt": "Analog",
       "width": 480,
       "height": 114
+    },
+    {
+      "src": "/assets/img/partners/2026/waterbom.png",
+      "alt": "Waterbom Bali",
+      "width": 234,
+      "height": 110
+    },
+    {
+      "src": "",
+      "alt": "Rise and Shine"
     }
   ]
 }
