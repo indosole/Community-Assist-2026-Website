@@ -1,11 +1,16 @@
 ---
 import sponsors from '../data/sponsors.json';
+import { sizeLogo } from './logos.js';
+// `ref` = tier size: each tier is a clear step smaller than the one above it.
 const tiers = [
-  { key: 'champions', cls: 'champions', label: sponsors.championsLabel || 'Community Assist Partners', logos: sponsors.champions || [] },
-  { key: 'gameChangers', cls: 'changers', label: sponsors.gameChangersLabel || 'Game Changers', logos: sponsors.gameChangers || [] },
-  { key: 'communityHeroes', cls: 'heroes', label: sponsors.communityHeroesLabel || 'Community Heroes', logos: sponsors.communityHeroes || [], more: sponsors.communityHeroesMore },
-  { key: 'supporters', cls: 'heroes', label: sponsors.supportersLabel || 'Supporters', logos: sponsors.supporters || [] },
+  { key: 'champions', cls: 'champions', ref: 46, label: sponsors.championsLabel || 'Community Assist Partners', logos: sponsors.champions || [] },
+  { key: 'gameChangers', cls: 'changers', ref: 36, label: sponsors.gameChangersLabel || 'Game Changers', logos: sponsors.gameChangers || [] },
+  { key: 'communityHeroes', cls: 'heroes', ref: 28, label: sponsors.communityHeroesLabel || 'Community Heroes', logos: sponsors.communityHeroes || [], more: sponsors.communityHeroesMore },
+  { key: 'supporters', cls: 'supporters', ref: 22, label: sponsors.supportersLabel || 'Supporters', logos: sponsors.supporters || [] },
 ].filter((t) => t.logos.length > 0);
+for (const t of tiers) {
+  t.logos = await Promise.all(t.logos.map(async (s) => ({ ...s, k: s.src ? await sizeLogo(s.src, t.ref) : null, ref: t.ref })));
+}
 ---
 
 <!-- ============ 9 · Sponsors ============ -->
@@ -22,7 +27,9 @@ const tiers = [
         <p class="st-label">{t.label}</p>
         <div class={`logo-row ${t.cls}`}>
           {t.logos.map((s) => (
-            <img class={`slogo${s.mono ? ' slogo--mono' : ''}`} src={s.src} width={s.width} height={s.height} alt={s.alt} loading="lazy" />
+            s.src
+              ? <img class={`slogo${s.mono ? ' slogo--mono' : ''}`} src={s.src} width={s.width} height={s.height} alt={s.alt} loading="lazy" style={`height: calc(${s.k} * var(--logo-u))`} />
+              : <span class="slogo-text" style={`font-size: calc(${s.ref * 0.52} * var(--logo-u))`}>{s.alt}</span>
           ))}
         </div>
         {t.more && <p class="hero-more">{t.more}</p>}
@@ -32,3 +39,13 @@ const tiers = [
     <p class="sponsor-cta reveal">{sponsors.ctaText} <a href={sponsors.ctaLink.href}>{sponsors.ctaLink.label}</a></p>
   </div>
 </section>
+
+<style is:global>
+  /* Logo sizing: heights are set per logo at build time (src/components/logos.js) as a multiple of
+     --logo-u, so every logo in a tier has the same optical weight. --logo-u is ~1px on
+     desktop and scales down on small screens. */
+  :root { --logo-u: clamp(0.66px, calc(0.38px + 0.05vw), 1px); }
+  .slogo, .mlogo, .plogo { max-width: 100%; }
+  .logo-row.supporters { column-gap: clamp(24px, 3.2vw, 46px); row-gap: clamp(12px, 1.8vw, 20px); }
+  .slogo-text { font-family: var(--font-display); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); opacity: .85; line-height: 1; white-space: nowrap; }
+</style>

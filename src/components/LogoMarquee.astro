@@ -1,6 +1,7 @@
 ---
 import data from '../data/logostrip.json';
-const logos = data.logos;
+import { sizeLogo } from './logos.js';
+const logos = await Promise.all((data.logos || []).filter((l) => l.src).map(async (l) => ({ ...l, k: await sizeLogo(l.src, 30) })));
 ---
 
 <!-- ============ 4b · Logo strip (scrolling marquee) ============ -->
@@ -10,12 +11,12 @@ const logos = data.logos;
     <div class="marquee-track">
       <ul class="marquee-group">
         {logos.map((l) => (
-          <li><img class="mlogo" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" /></li>
+          <li><img class="mlogo" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" style={`height: calc(${l.k} * var(--logo-u))`} /></li>
         ))}
       </ul>
       <ul class="marquee-group" aria-hidden="true">
         {logos.map((l) => (
-          <li><img class="mlogo" src={l.src} width={l.width} height={l.height} alt="" loading="lazy" /></li>
+          <li><img class="mlogo" src={l.src} width={l.width} height={l.height} alt="" loading="lazy" style={`height: calc(${l.k} * var(--logo-u))`} /></li>
         ))}
       </ul>
     </div>

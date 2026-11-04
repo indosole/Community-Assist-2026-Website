@@ -1,5 +1,9 @@
 ---
 import cred from '../data/credibility.json';
+import { sizeLogo } from './logos.js';
+const withSrc = (cred.partnerLogos || []).filter((l) => l.src);
+const lead = await Promise.all(withSrc.slice(0, 4).map(async (l) => ({ ...l, k: await sizeLogo(l.src, 38) })));
+const rest = await Promise.all(withSrc.slice(4).map(async (l) => ({ ...l, k: await sizeLogo(l.src, 22) })));
 ---
 
 <!-- ============ 2 · Credibility band ============ -->
@@ -17,13 +21,13 @@ import cred from '../data/credibility.json';
       <p class="ll-label">{cred.partnersLabel}</p>
       {/* First 4 are the lead partners (Community Assist Partners), shown larger as a lead line. */}
       <div class="logo-row logo-row--lead">
-        {cred.partnerLogos.slice(0, 4).map((l) => (
-          <img class="plogo plogo--lead" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" />
+        {lead.map((l) => (
+          <img class="plogo plogo--lead" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" style={`height: calc(${l.k} * var(--logo-u))`} />
         ))}
       </div>
       <div class="logo-row">
-        {cred.partnerLogos.slice(4).map((l) => (
-          <img class="plogo" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" />
+        {rest.map((l) => (
+          <img class="plogo" src={l.src} width={l.width} height={l.height} alt={l.alt} loading="lazy" style={`height: calc(${l.k} * var(--logo-u))`} />
         ))}
       </div>
     </div>
