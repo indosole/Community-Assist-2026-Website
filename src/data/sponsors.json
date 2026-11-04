@@ -10,72 +10,31 @@
       "height": 158
     },
     {
-      "src": "/assets/img/partners/pnny-white.webp",
-      "alt": "PNNY",
-      "width": 340,
-      "height": 151
-    },
-    {
       "src": "/assets/img/partners/project-black-white.webp",
       "alt": "Project: Black",
       "width": 602,
       "height": 68
-    },
+    }
+  ],
+  "gameChangers": [
     {
       "src": "/assets/img/partners/nuanu-social-fund-white.webp",
       "alt": "Nuanu Social Fund",
       "width": 673,
       "height": 116
+    },
+    {
+      "src": "/assets/img/partners/trim/finns-bali.png",
+      "alt": "Finns Bali",
+      "width": 433,
+      "height": 120
     }
   ],
-  "gameChangers": [
+  "communityHeroes": [
     {
-      "src": "/assets/img/partners/trim/palm-four.png",
-      "alt": "Palm Four",
-      "width": 476,
-      "height": 62
-    },
-    {
-      "src": "/assets/img/partners/ragam-white.png",
-      "alt": "Ragam Foundation",
-      "width": 507,
-      "height": 157
-    },
-    {
-      "src": "/assets/img/partners/luigis-white.png",
-      "alt": "Luigi's Hot Pizza",
-      "width": 693,
-      "height": 164
-    }
-  ],
-  "communityHeroes": [],
-  "communityHeroesMore": "",
-  "ctaText": "Want your logo here?",
-  "ctaLink": {
-    "label": "Become a partner →",
-    "href": "#give"
-  },
-  "championsLabel": "Community Assist Partners",
-  "gameChangersLabel": "Partners",
-  "communityHeroesLabel": "Community Heroes",
-  "supportersLabel": "Supporters",
-  "supporters": [
-    {
-      "src": "/assets/img/partners/jiwa-community-garden-white.png",
-      "alt": "Jiwa Community Garden",
-      "width": 330,
-      "height": 194
-    },
-    {
-      "src": "/assets/img/partners/tacos-aqui-white.png",
-      "alt": "Tacos Aqui",
-      "width": 340,
-      "height": 108
-    },
-    {
-      "src": "/assets/img/partners/trim/pound-4-pound-dojo.png",
-      "alt": "Pound 4 Pound Dojo",
-      "width": 779,
+      "src": "/assets/img/partners/trim/casa-las-tortugas.png",
+      "alt": "Casa Las Tortugas",
+      "width": 807,
       "height": 120
     },
     {
@@ -85,10 +44,52 @@
       "height": 506
     },
     {
+      "src": "/assets/img/partners/trim/the-block.png",
+      "alt": "The Block",
+      "width": 441,
+      "height": 120
+    },
+    {
+      "src": "/assets/img/partners/trim/miyo.png",
+      "alt": "Miyo",
+      "width": 240,
+      "height": 120
+    },
+    {
+      "src": "/assets/img/partners/luigis-white.png",
+      "alt": "Luigi's Hot Pizza",
+      "width": 693,
+      "height": 164
+    }
+  ],
+  "communityHeroesMore": "",
+  "ctaText": "Want your logo here?",
+  "ctaLink": {
+    "label": "Become a partner →",
+    "href": "#give"
+  },
+  "championsLabel": "Community Assist Partners",
+  "gameChangersLabel": "Game Changers",
+  "communityHeroesLabel": "Community Heroes",
+  "supportersLabel": "Supporters",
+  "supporters": [
+    {
       "src": "/assets/img/partners/the-boogaloo-white.webp",
       "alt": "The Boogaloo",
       "width": 628,
       "height": 244
+    },
+    {
+      "src": "/assets/img/partners/trim/pound-4-pound-dojo.png",
+      "alt": "Pound 4 Pound Dojo",
+      "width": 779,
+      "height": 120
+    },
+    {
+      "src": "/assets/img/partners/trim/woods.png",
+      "alt": "The Woods",
+      "width": 399,
+      "height": 107
     },
     {
       "src": "/assets/img/partners/trim/arte.png",
