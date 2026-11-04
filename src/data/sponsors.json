@@ -418,8 +418,10 @@
       "height": 110
     },
     {
-      "src": "",
-      "alt": "Rise and Shine"
+      "src": "/assets/img/partners/2026/rise-and-shine.png",
+      "alt": "Rise and Shine",
+      "width": 329,
+      "height": 70
     }
   ]
 }
