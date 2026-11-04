@@ -17,10 +17,7 @@
       "link3Href": "https://community-assist-courtside.vercel.app/live/ca-2026",
       "link3Label": "Live scores & schedule",
       "link2Href": "https://docs.google.com/forms/d/e/1FAIpQLSf9zpyIxDp_VbH_C6NuKjYs2yEpcyK7BbfBJve5vXAPOhhDXg/viewform",
-      "link2Label": "Register a youth team",
-      "qrImg": "/assets/img/qr-live-scores.png",
-      "qrLabel": "Scan for live scores & schedule on your phone",
-      "qrHref": "https://community-assist-courtside.vercel.app/live/ca-2026"
+      "link2Label": "Register a youth team"
     },
     {
       "delay": "d2",
@@ -58,6 +55,16 @@
       "blurb": "The 2027 merch drop and bocce."
     }
   ],
+  "liveScores": {
+    "enabled": true,
+    "eyebrow": "3x3 Charity Basketball · 7 Nov 2026",
+    "heading": "Follow the tournament live",
+    "text": "Scan the QR code with your phone to follow the 6th Annual 3x3 Charity Basketball Tournament at Canggu Community School: live scores and the full game schedule, updated as every game is played.",
+    "buttonLabel": "Open live scores",
+    "href": "https://community-assist-courtside.vercel.app/live/ca-2026",
+    "qr": "/assets/img/qr-live-scores.png",
+    "qrCaption": "Scan with your phone camera"
+  },
   "bePart": {
     "heading": "Be part of the day",
     "sub": "There's a way in for everyone, not just a cheque.",
