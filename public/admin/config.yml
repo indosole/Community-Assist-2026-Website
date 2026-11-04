@@ -391,6 +391,19 @@ collections:
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
               - { label: "Alt", name: "alt", widget: "string" }
               - { label: "Animation delay", name: "delay", widget: "hidden" }
+          - label: "Live scores panel (basketball tournament)"
+            name: "liveScores"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Show panel", name: "enabled", widget: "boolean", default: true, hint: "Turn off after the tournament to hide the panel." }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text (HTML allowed)", name: "text", widget: "text" }
+              - { label: "Button text", name: "buttonLabel", widget: "string" }
+              - { label: "Live scores URL", name: "href", widget: "string" }
+              - { label: "QR code image", name: "qr", widget: "image" }
+              - { label: "QR caption", name: "qrCaption", widget: "string", required: false }
           - label: "Be part of the day"
             name: "bePart"
             widget: "object"
