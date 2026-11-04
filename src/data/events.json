@@ -17,7 +17,10 @@
       "link3Href": "https://community-assist-courtside.vercel.app/live/ca-2026",
       "link3Label": "Live scores & schedule",
       "link2Href": "https://docs.google.com/forms/d/e/1FAIpQLSf9zpyIxDp_VbH_C6NuKjYs2yEpcyK7BbfBJve5vXAPOhhDXg/viewform",
-      "link2Label": "Register a youth team"
+      "link2Label": "Register a youth team",
+      "qrImg": "/assets/img/qr-live-scores.png",
+      "qrLabel": "Scan for live scores & schedule on your phone",
+      "qrHref": "https://community-assist-courtside.vercel.app/live/ca-2026"
     },
     {
       "delay": "d2",
