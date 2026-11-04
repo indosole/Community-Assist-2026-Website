@@ -383,6 +383,9 @@ collections:
               - { label: "Second link text (optional)", name: "link2Label", widget: "string", required: false }
               - { label: "Third link URL (optional)", name: "link3Href", widget: "string", required: false }
               - { label: "Third link text (optional)", name: "link3Label", widget: "string", required: false }
+              - { label: "QR code image (optional)", name: "qrImg", widget: "image", required: false, hint: "Shown under the links on desktop/tablet, hidden on phones." }
+              - { label: "QR code text (optional)", name: "qrLabel", widget: "string", required: false }
+              - { label: "QR code link (optional)", name: "qrHref", widget: "string", required: false, hint: "Where a click on the QR goes. Defaults to the third link." }
               - { label: "Image", name: "img", widget: "image" }
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
