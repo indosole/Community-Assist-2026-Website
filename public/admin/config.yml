@@ -454,7 +454,7 @@ collections:
             name: "champions"
             widget: "list"
             fields:
-              - { label: "Logo", name: "src", widget: "image" }
+              - { label: "Logo", name: "src", widget: "image", required: false, hint: "Leave empty to show the name as text until a logo is available." }
               - { label: "Alt", name: "alt", widget: "string" }
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
@@ -464,7 +464,7 @@ collections:
             name: "gameChangers"
             widget: "list"
             fields:
-              - { label: "Logo", name: "src", widget: "image" }
+              - { label: "Logo", name: "src", widget: "image", required: false, hint: "Leave empty to show the name as text until a logo is available." }
               - { label: "Alt", name: "alt", widget: "string" }
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
@@ -474,7 +474,7 @@ collections:
             name: "communityHeroes"
             widget: "list"
             fields:
-              - { label: "Logo", name: "src", widget: "image" }
+              - { label: "Logo", name: "src", widget: "image", required: false, hint: "Leave empty to show the name as text until a logo is available." }
               - { label: "Alt", name: "alt", widget: "string" }
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
@@ -486,7 +486,7 @@ collections:
             widget: "list"
             required: false
             fields:
-              - { label: "Logo", name: "src", widget: "image" }
+              - { label: "Logo", name: "src", widget: "image", required: false, hint: "Leave empty to show the name as text until a logo is available." }
               - { label: "Alt", name: "alt", widget: "string" }
               - { label: "Width", name: "width", widget: "number", required: false, value_type: "int" }
               - { label: "Height", name: "height", widget: "number", required: false, value_type: "int" }
