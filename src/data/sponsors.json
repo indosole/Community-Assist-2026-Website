@@ -186,8 +186,10 @@
       "height": 120
     },
     {
-      "src": "",
-      "alt": "Villa Milo"
+      "src": "/assets/img/partners/2026/villa-milo.png",
+      "alt": "Villa Milo",
+      "width": 96,
+      "height": 120
     },
     {
       "src": "/assets/img/partners/2026/banana-joe.png",
@@ -422,6 +424,20 @@
       "alt": "Rise and Shine",
       "width": 329,
       "height": 70
+    },
+    {
+      "src": "/assets/img/partners/trim/potato-head.png",
+      "alt": "Potato Head",
+      "width": 546,
+      "height": 78
+    },
+    {
+      "src": "",
+      "alt": "Masana"
+    },
+    {
+      "src": "",
+      "alt": "Baked"
     }
   ]
 }
