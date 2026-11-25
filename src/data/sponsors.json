@@ -438,6 +438,12 @@
     {
       "src": "",
       "alt": "Baked"
+    },
+    {
+      "src": "/assets/img/partners/2026/flatto.png",
+      "alt": "Flatto",
+      "width": 266,
+      "height": 120
     }
   ]
 }
